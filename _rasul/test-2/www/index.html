@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+    <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+
+    <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script type="application/javascript" src="js/jquery.min.js"></script>
+    <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+    <script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
+    <script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
+    <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+    <script type="application/javascript" src="sidebar/js/swipe.js"></script>
+  </head>
+
+  <body>
+    <div class="uwrap">
+      <div class="upage" id="mainpage" data-role="page">
+        <div class="upage-outer">
+          <div data-role="header" class="container-group inner-element uib_w_2" data-uib="jquery_mobile/header" data-ver="0" data-theme="b">
+            <h1>N2N</h1>
+            <div class="widget-container wrapping-col single-centered"></div>
+            <div class="widget-container content-area horiz-area wrapping-col left"></div>
+            <div class="widget-container content-area horiz-area wrapping-col right"></div>
+          </div>
+          <div class="upage-content" id="mainsub">
+
+            <div class="grid grid-pad urow uib_row_8 row-height-8" data-uib="layout/row" data-ver="0">
+              <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col center">
+
+                  <div class="table-thing with-label widget uib_w_20 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                    <label class="narrow-control"></label>
+                    <input class="wide-control" type="search" data-mini="true" placeholder="Who are you searching for ">
+                  </div>
+                  <div class="widget uib_w_14 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+                    <ul data-role="listview">
+                      <li class="widget uib_w_15 img" data-uib="jquery_mobile/listitem" data-ver="0">
+                        <img src="images/ki.png">
+                        <h2>Kheprw Insititue</h2>
+                        <p>Community Empowerment Through Self Mastery</p>
+                      </li>
+                      <li class="widget uib_w_16 img" data-uib="jquery_mobile/listitem" data-ver="0">
+                        <img src="images/hoam.jpg">
+                        <h2>Hoam</h2>
+                        <p>Houses for people</p>
+                      </li>
+                      <li class="widget uib_w_17 img" data-uib="jquery_mobile/listitem" data-ver="0">
+                        <img src="images/muffin.jpg">
+                        <h2>Muffin's Cafe</h2>
+                        <p>Muffins Matter</p>
+                      </li>
+                      <li class="widget uib_w_18 img" data-uib="jquery_mobile/listitem" data-ver="0">
+                        <img src="images/monster.jpg">
+                        <h2>Monster Inc.</h2>
+                        <p>We Scare Becuse We Care</p>
+                      </li>
+                      <li class="widget uib_w_19 img" data-uib="jquery_mobile/listitem" data-ver="0">
+                        <img src="images/alo.jpg">
+                        <h2>AOL</h2>
+                        <p>American Orientation to Languages</p>
+                      </li><span class="uib_shim"></span>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+          <!-- /upage-content -->
+
+          <div data-role="footer" data-position="fixed" class="container-group inner-element uib_w_3" data-uib="jquery_mobile/footer" data-ver="0">
+            <h1></h1>
+            <div class="widget-container wrapping-col single-centered"></div>
+            <div class="widget-container content-area horiz-area wrapping-col left"><a class="widget uib_w_12 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">FAQ</a>
+            </div>
+            <div class="widget-container content-area horiz-area wrapping-col right"><a class="widget uib_w_13 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Report</a>
+            </div>
+          </div>
+        </div>
+        <!-- /upage-outer -->
+
+      </div>
+      <!-- /upage -->
+
+    </div>
+    <!-- /uwrap -->
+  </body>
+
+</html>
