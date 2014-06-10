@@ -69,11 +69,12 @@
           </div>
           <!-- /upage-content -->
 
-          <div data-role="footer" style="overflow:hidden;" data-position="fixed">
+         <div data-role="footer" style="overflow:hidden;" data-position="fixed">
 			<div data-role="navbar">
         		<ul>
-            		<li><a href="#" style="background-color:#000000">FAQ</a></li>
-            		<li><a href="#" style="background-color:#000000">Report A Problem</a></li>
+            		<li style="width: 25%;"><a href="index.html" style="background-color:#000000">Home</a></li>
+                    <li style="width: 25%;"><a href="#" style="background-color:#000000">FAQ</a></li>
+            		<li style="width: 50%;"><a href="#" style="background-color:#000000">Report A Problem</a></li>
         		</ul>
     		</div><!-- /navbar -->
 		  </div><!-- /footer -->
@@ -86,7 +87,7 @@
 
             <div class="col uib_col_3 single-col" data-uib="layout/col">
               <div class="embed-video widget uib_w_54 d-margins" data-uib="media/youtube">
-                <iframe width="auto" height="auto" src="//www.youtube.com/embed/Nc1qFGLn82E" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="50%" src="//www.youtube.com/embed/Nc1qFGLn82E" frameborder="0" allowfullscreen></iframe>
                </div>
               <div class="widget-container content-area vertical-col">
 
@@ -94,48 +95,7 @@
                   <div class="col uib_col_5 col-0" data-uib="layout/col" data-ver="0">
                     <div class="widget-container content-area vertical-col">
 
-                      <div data-role="collapsible-set" class="no_wrap widget uib_w_26 d-margins" data-uib="jquery_mobile/accordion" data-ver="0" data-mini="true">
-                        <div data-role="collapsible" class="no_wrap widget uib_w_27" data-uib="jquery_mobile/collapsible" data-ver="0" data-mini="true">
-                          <h4>Express Yourself Rain Barrels</h4>
-                          <div class="col uib_col_6 single-col" data-uib="layout/col" data-ver="0">
-                            <div class="widget-container content-area vertical-col">
-
-                              <div class="widget uib_w_31 scale-image d-margins" data-uib="media/img" data-ver="0">
-                                <figure class="figure-align">
-                                  <img src="">
-                                </figure>
-                              </div>
-                              <div class="widget uib_w_30 d-margins" data-uib="media/text" data-ver="0">
-                                <div class="widget-container left-receptacle"></div>
-                                <div class="widget-container right-receptacle"></div>
-                                <div>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                              </div><span class="uib_shim"></span>
-                            </div>
-                          </div>
-                        </div>
-                        <div data-role="collapsible" class="no_wrap widget uib_w_28" data-uib="jquery_mobile/collapsible" data-ver="0" data-mini="true">
-                          <h4>KI Numedia</h4>
-                          <div class="col uib_col_7 single-col" data-uib="layout/col" data-ver="0">
-                            <div class="widget-container content-area vertical-col">
-
-                              <div class="widget uib_w_32 d-margins" data-uib="media/text" data-ver="0">
-                                <div class="widget-container left-receptacle">
-                                  <div class="widget uib_w_33 scale-image d-margins" data-uib="media/img" data-ver="0">
-                                    <figure class="figure-align">
-                                      <img src="">
-                                    </figure>
-                                  </div>
-                                </div>
-                                <div class="widget-container right-receptacle"></div>
-                                <div>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                              </div><span class="uib_shim"></span>
-                            </div>
-                          </div>
-                        </div>
+                      <div data-role="collapsible-set" class="no_wrap widget uib_w_26 d-margins" data-uib="jquery_mobile/accordion" data-ver="0" data-mini="true"> 
                         <div data-role="collapsible" class="no_wrap widget uib_w_29" data-uib="jquery_mobile/collapsible" data-ver="0" data-mini="true">
                           <h4>EcoFashion Bags</h4>
                           <div class="col uib_col_8 single-col" data-uib="layout/col" data-ver="0">
@@ -158,6 +118,52 @@
                           </div>
                         </div>
                       </div>
+                        <div data-role="collapsible" class="no_wrap widget uib_w_27" data-uib="jquery_mobile/collapsible" data-ver="0" data-mini="true">
+                          <h4>Express Yourself Rain Barrels</h4>
+                          <div class="col uib_col_6 single-col" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                              <div class="widget uib_w_31 scale-image d-margins" data-uib="media/img" data-ver="0">
+                                <figure class="figure-align">
+                                  <img src="">
+                                </figure>
+                              </div>
+                              <div class="widget uib_w_30 d-margins" data-uib="media/text" data-ver="0">
+                                <div class="widget-container left-receptacle"></div>
+                                <div class="widget-container right-receptacle"></div>
+                                <div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                              </div><span class="uib_shim"></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-role="collapsible" class="no_wrap widget uib_w_28" data-uib="jquery_mobile/collapsible" data-ver="0" data-mini="true">
+                           <h4>KI NuMedia</h4>
+                      <div class="col uib_col_34 single-col" data-uib="layout/col" data-ver="0">
+                        <div class="widget-container content-area vertical-col">
+
+                          <div class="widget uib_w_79 d-margins link" data-uib="media/text" data-ver="0">
+                            <div class="widget-container left-receptacle"></div>
+                            <div class="widget uib_w_78 scale-image d-margins" data-uib="media/img" data-ver="0">
+                            <figure class="figure-align">
+                              <img src="images/NuMedia Logo.png"  width="100%" alt="Logo" longdesc="images/NuMedia Logo.png">
+<figcaption data-position="bottom"></figcaption>
+                            </figure>
+                          </div>
+
+                          <span class="uib_shim"></span>
+                        </div>
+                        <div>
+                              <p>We offer graphic design, web/mobile app development, social media management and branding services.
+                        </div>
+                          </div>
+                            <div class="widget-container right-receptacle">
+                              <a href="offeringDetail.php" class="widget uib_w_81 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true">More Info</a>
+                            </div>
+                        </div>
+                        </div>
+                        
                       <span class="uib_shim"></span>
                     </div>
                   </div>

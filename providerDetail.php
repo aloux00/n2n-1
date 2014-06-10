@@ -40,8 +40,8 @@
                 <div class="widget-container content-area vertical-col">
 
                   <div class="widget uib_w_70 scale-image d-margins" data-uib="media/img" data-ver="0">
-                    <figure class="figure-align" align="left" style="margin-left:30px;">
-                     <img src="images/ki.jpg" width="128" height="128" alt="KI Logo">
+                    <figure class="figure-align" align="left" style="margin-left:30px; margin-top:10px;">
+                     <img src="images/ki_trsp.png" width="128" height="128" alt="KI Logo">
                     </figure>
                   </div>
                   <div class="widget uib_w_73 d-margins phone" data-uib="media/text" data-ver="0">
@@ -77,8 +77,9 @@
               </div>
             </div>
             </div>
-             <span class="uib_shim"></span>           
-            <div class="grid grid-pad urow uib_row_18 row-height-18" data-uib="layout/row" data-ver="0" style="margin-left:30px; margin-right:30px; margin-top: 50px;">
+             <span class="uib_shim"></span>
+                        
+            <div class="grid grid-pad urow uib_row_18 row-height-18" data-uib="layout/row" data-ver="0" style="margin-left:20px; margin-right:20px; margin-top: 50px;">
               <div class="col uib_col_33 col-0_12-12" data-uib="layout/col" data-ver="0">
                 <div class="widget-container content-area vertical-col">
                  	<div style="height=50px;"data-ver="0">
@@ -87,7 +88,7 @@
                  </div>
                
              
-                  <div data-role="collapsible-set" class="no_wrap widget uib_w_74 d-margins" data-uib="jquery_mobile/accordion" data-ver="0" data-collapsed-icon="plus" data-expanded-icon="minus">
+                  <div data-role="collapsible-set" class="no_wrap widget uib_w_74 d-margins" data-uib="jquery_mobile/accordion" data-ver="0" data-collapsed-icon="plus" data-expanded-icon="minus" data-theme="a">
                     <div data-role="collapsible" class="no_wrap widget uib_w_75" data-uib="jquery_mobile/collapsible" data-ver="0" data-mini="true" data-collapsed-icon="eye">
                       <h4>KI NuMedia</h4>
                       <div class="col uib_col_34 single-col" data-uib="layout/col" data-ver="0">
@@ -97,19 +98,19 @@
                             <div class="widget-container left-receptacle"></div>
                             <div class="widget uib_w_78 scale-image d-margins" data-uib="media/img" data-ver="0">
                             <figure class="figure-align">
-                              <img src="images/alo.jpg" height="100px"> 
-                              <figcaption data-position="bottom"></figcaption>
+                              <img src="images/NuMedia Logo.png"  width="100%" alt="Logo" longdesc="images/NuMedia Logo.png">
+<figcaption data-position="bottom"></figcaption>
                             </figure>
                           </div>
 
                           <span class="uib_shim"></span>
                         </div>
                         <div>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. olor sit am etur adip</p>
+                              <p>We offer graphic design, web/mobile app development, social media management and branding services.
                         </div>
                           </div>
                             <div class="widget-container right-receptacle">
-                              <a href="http://kinumedia.org/" class="widget uib_w_81 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true">More Info</a>
+                              <a href="offeringDetail.php" class="widget uib_w_81 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true">More Info</a>
                             </div>
                             
                       </div>
@@ -135,7 +136,7 @@
                         </div>
                           </div>
                             <div class="widget-container right-receptacle">
-                              <a href="http://expressyourselfrainbarrels.com/" class="widget uib_w_81 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true">More Info</a>
+                              <a href="" class="widget uib_w_81 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true">More Info</a>
                             </div>
                             
                       </div>
@@ -161,7 +162,7 @@
                         </div>
                           </div>
                             <div class="widget-container right-receptacle">
-                              <a href="http://kiecofashion.storenvy.com/" class="widget uib_w_81 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true">More Info</a>
+                              <a href="" class="widget uib_w_81 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true">More Info</a>
                             </div>
                       </div>
                 </div>
@@ -169,9 +170,9 @@
           <div data-role="footer" style="overflow:hidden;" data-position="fixed">
 			<div data-role="navbar">
         		<ul>
-            		<li><a href="#" style="background-color:#000000">Home</a></li>
-                    <li><a href="#" style="background-color:#000000">FAQ</a></li>
-            		<li><a href="#" style="background-color:#000000">Report A Problem</a></li>
+            		<li style="width: 25%;"><a href="#" style="background-color:#000000">Home</a></li>
+                    <li style="width: 25%;"><a href="#" style="background-color:#000000">FAQ</a></li>
+            		<li style="width: 50%;"><a href="#" style="background-color:#000000">Report Problem</a></li>
         		</ul>
     		</div><!-- /navbar -->
 		  </div><!-- /footer -->
