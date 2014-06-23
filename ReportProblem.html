@@ -1,0 +1,102 @@
+<!DOCTYPE  doctype-->
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<link rel="stylesheet" href="themes/Neighborly.min.css">       
+	<?php
+	require('dbx.php');
+	require('reportProblem.php')
+	?> 
+	<title>Report A Problem</title>    
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<script type="text/javascript" src="utils.js"></script>
+	<script type="application/javascript" src="js/jquery.min.js"></script>
+	<script type="application/javascript" src="js/index_user_scripts.js"></script>
+	<script type="application/javascript" src="popup/popup.min.js"></script>
+    <script type="text/javascript"></script>
+  </head>
+
+  <body><!-- content goes here -->
+    
+    <div class="uwrap"><!-- uwrap -->
+      <div id="mainpage" data-role="page" data-theme="a"><!-- mainpage -->
+      
+          <div data-role="header" style="overflow:hidden;">
+            <h1 style="vertical-align: middle; text-align: center; margin:0px;">Report A Problem</h1>
+          </div>
+          
+          <div class="upage-content" id="mainsub"><!-- upage-content -->
+                  
+          	<div>
+            	<form data-ajax="false" id="problemform" action="reportProblem.php" method="post">     
+        			<div style="padding:5px 20px;">
+            		<div class="ui-field-contain">
+                    	<h4 style="margin-bottom:5px;">Issue</h4>
+                    	<label for="problemList" class="ui-hidden-accessible">Issue</label>
+                    	<input type="hidden" value="$probList">
+                      	<select name="probList" id="probList"> 
+                        	<option value="">Select...</option>
+                        	<option value="a">Problem using this Application</option>
+                        	<option value="q">Need to ask a Question</option>
+                        	<option value="i">Provider item seems to be Inactive</option>
+                        	<option value="p">Bad interaction with a Provider</option>
+                        	<option value="s">Bad experience with Service/Product</option>
+                        	<option value="o">Other</option>
+                      	</select>
+                  	</div>
+                    <div class="ui-field-contain">
+                    	<h4 style="margin-bottom:5px;">Comments</h4>
+            			<label for="comments" class="ui-hidden-accessible">Comments:</label>
+            			<textarea cols="40" rows="8" name="comments" id="comments"></textarea>
+                		<input type="hidden" value="$comments">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                    	<h4 style="margin-bottom:5px;">Your Name</h4>
+            			<label for="name" class="ui-hidden-accessible">Name:</label>
+            			<input type="text" name="name" id="name" /> 
+                		<input type="hidden" value="$name">
+                    </div>
+                    
+                    <div class="ui-field-contain">
+                    	<h4 style="margin-bottom:5px;">If we need to follow up with you, what is the preferred method of contact?</h4>
+                    	<label for="ctMethod" class="ui-hidden-accessible">Contact Method</label>
+                    	<input type="hidden" value="$ctMethod">
+                      	<select name="ctMethod" id="ctMethod"> 
+                        	<option value="">Select...</option>
+                        	<option value="e">Email</option>
+                        	<option value="p">Phone</option>
+                      	</select>
+                  	</div>
+                 <div class="ui-field-contain">   
+            	<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="margin-top: 20px;">Submit</button>
+                </div>
+        	</div>
+    	</form>
+          		</div>
+          
+          </div><!-- /upage-content -->
+
+          <div style="height: 30px"></div>
+
+          <div data-role="footer" style="overflow:hidden;" data-position="fixed">
+			<div data-role="navbar">
+        		<ul>
+            		<li><a href="#" style="background-color:#000000">FAQ</a></li>
+            		<li><a href="index.html" style="background-color:#000000">Home</a></li>
+        		</ul>
+    		</div><!-- /navbar -->
+		  </div><!-- /footer -->
+          
+	</div>
+          
+ </div><!-- /mainpage --> 
+</div><!-- /uwrap --> 
+     
+</body>
+
+</html>

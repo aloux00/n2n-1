@@ -81,7 +81,7 @@
         		<ul>
             		<li style="width: 25%;"><a href="index.html" style="background-color:#000000">Home</a></li>
                     <li style="width: 25%;"><a href="#" style="background-color:#000000">FAQ</a></li>
-            		<li style="width: 50%;"><a href="#" style="background-color:#000000">Report A Problem</a></li>
+            		<li style="width: 50%;"><a href="ReportProblem.html" style="background-color:#000000">Report A Problem</a></li>
         		</ul>
     		</div><!-- /navbar -->
 		  </div><!-- /footer -->
@@ -98,7 +98,7 @@
             <input type="text" name="user" id="name" data-clear-btn="true" />
             <input type="hidden" value="$name"/>
             <label for="email" >Email Address:</label>
-            <input type="email" name="email" id="email" data-clear-btn="true" value="">
+            <input type="email" name="email" id="email" data-clear-btn="true" />
             <input type="hidden" value="$email"/>
             <label for="textarea">Message:</label>
 			<textarea cols="40" rows="8" name="message" value="$message"></textarea>

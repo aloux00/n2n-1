@@ -98,25 +98,25 @@
           <div data-role="footer" style="overflow:hidden;" data-position="fixed">
 			<div data-role="navbar">
         		<ul>
-            		<li><a href="#" style="background-color:#000000">FAQ</a></li>
-            		<li><a href="#" style="background-color:#000000">Report A Problem</a></li>
+            		<li><a href="" style="background-color:#000000">FAQ</a></li>
+            		<li><a href="ReportProblem.html" style="background-color:#000000">Report A Problem</a></li>
         		</ul>
     		</div><!-- /navbar -->
 		  </div><!-- /footer -->
           
           <div data-role="popup" id="popupSignIn" class="ui-corner-all" style="margin-bottom:30px; background-color:#666666; color:#ffffff">
-          <form action="provider.php" method="post"  id="signIn">
+          <form data-ajax="false" action="user.php" method="post"  id="signIn">
         	<div style="padding:10px 20px;">
             <h3 align="center">Log In</h3>
             <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
-        		<h4 class="ui-title">If you do not have an account, click <a href="">here</a>to register. </h4>
+        		<h4>If you do not have an account, click <a href="">here </a>to register. </h4>
             	<div style="height:10px;"></div>
             	<label for="usrname" class="ui-hidden-accessible">Username:</label>
-            	<input type="text" name="usrname" id="usrname" placeholder="username">
-            	<input type="hidden" value="$usrname"/>
+            	<input type="text" name="usrname" id="usrname" placeholder="username"/>
+                <input type="hidden" value="$usrname">
             	<label for="passwrd" class="ui-hidden-accessible">Password:</label>
-            	<input type="password" name="passwrd" id="passwrd" placeholder="password">
-            	<input type="hidden" value="$passwrd"/>
+            	<input type="password" name="passwrd" id="passwrd" placeholder="password"/>
+                <input type="hidden" value="$passwrd">
             	<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="margin-top: 10px;">Submit</button>
         	</div>
     	</form>

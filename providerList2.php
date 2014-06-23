@@ -74,7 +74,7 @@
         		<ul>
             		<li style="width: 25%;"><a href="index.html" style="background-color:#000000">Home</a></li>
                     <li style="width: 25%;"><a href="#" style="background-color:#000000">FAQ</a></li>
-            		<li style="width: 50%;"><a href="#" style="background-color:#000000">Report A Problem</a></li>
+            		<li style="width: 50%;"><a href="ReportProblem.html" style="background-color:#000000">Report A Problem</a></li>
         		</ul>
     		</div><!-- /navbar -->
 		  </div><!-- /footer -->
