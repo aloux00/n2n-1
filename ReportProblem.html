@@ -25,18 +25,19 @@
     <div class="uwrap"><!-- uwrap -->
       <div id="mainpage" data-role="page" data-theme="a"><!-- mainpage -->
       
-          <div data-role="header" style="overflow:hidden;">
+          <div data-role="header" data-position="fixed" style="overflow:hidden;">
             <h1 style="vertical-align: middle; text-align: center; margin:0px;">Report A Problem</h1>
+            <a href="#" data-icon="carat-1" class="ui-btn-right" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
           </div>
           
-          <div class="upage-content" id="mainsub"><!-- upage-content -->
+          <div class="upage-content" id="mainsub" style="margin-left:20px; margin-right:20px;"><!-- upage-content -->
                   
           	<div>
             	<form data-ajax="false" id="problemform" action="reportProblem.php" method="post">     
         			<div style="padding:5px 20px;">
-            		<div class="ui-field-contain">
-                    	<h4 style="margin-bottom:5px;">Issue</h4>
-                    	<label for="problemList" class="ui-hidden-accessible">Issue</label>
+            		<div>
+                    	<div style="height:10px;"></div>
+                    	<label for="problemList">Issue</label>
                     	<input type="hidden" value="$probList">
                       	<select name="probList" id="probList"> 
                         	<option value="">Select...</option>
@@ -48,21 +49,21 @@
                         	<option value="o">Other</option>
                       	</select>
                   	</div>
-                    <div class="ui-field-contain">
-                    	<h4 style="margin-bottom:5px;">Comments</h4>
-            			<label for="comments" class="ui-hidden-accessible">Comments:</label>
+                    <div>
+                    	
+            			<label for="comments">Comments:</label>
             			<textarea cols="40" rows="8" name="comments" id="comments"></textarea>
                 		<input type="hidden" value="$comments">
                     </div>
                     
-                    <div class="ui-field-contain">
-                    	<h4 style="margin-bottom:5px;">Your Name</h4>
-            			<label for="name" class="ui-hidden-accessible">Name:</label>
-            			<input type="text" name="name" id="name" /> 
-                		<input type="hidden" value="$name">
+                    <div>
+                    	
+            			<label for="pname">Name:</label>
+            			<input type="text" name="pname" id="pname" /> 
+                		<input type="hidden" value="$pname">
                     </div>
                     
-                    <div class="ui-field-contain">
+                    <div>
                     	<h4 style="margin-bottom:5px;">If we need to follow up with you, what is the preferred method of contact?</h4>
                     	<label for="ctMethod" class="ui-hidden-accessible">Contact Method</label>
                     	<input type="hidden" value="$ctMethod">
@@ -72,11 +73,12 @@
                         	<option value="p">Phone</option>
                       	</select>
                   	</div>
-                 <div class="ui-field-contain">   
-            	<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="margin-top: 20px;">Submit</button>
-                </div>
-        	</div>
-    	</form>
+                    <div style="height:40px;"></div> 
+                  <div>
+                  <button type="submit" id="problemSubmit" class="ui-shadow ui-btn ui-corner-all ui-mini">Submit</button>
+                  </div>
+                  </div>
+    			</form>
           		</div>
           
           </div><!-- /upage-content -->
