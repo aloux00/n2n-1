@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<link rel="stylesheet" href="themes/Neighborly.min.css">   
+    <title>Add an Offering</title>
+	<script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script type="application/javascript" src="js/jquery.min.js"></script>
+    <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+    <script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
+    <script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
+    <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+    <script type="application/javascript" src="sidebar/js/swipe.js"></script>
+    <script type="application/javascript" src="popup/popup.min.js"></script>
+    <script type="application/javascript" src="js/index_user_scripts.js"></script>
+    <script type="application/javascript" src="justgage/js/raphael.min.js"></script>
+    <script type="application/javascript" src="justgage/js/justgage.min.js"></script>
+    <script type="application/javascript" src="justgage/gauges.js"></script>
+    <script type="application/javascript" src="js/jqm_subpage.js"></script>
+<title>Offering</title>
+</head>
+
+<body>
+  <div class="uwrap"><!-- uwrap -->
+      <div id="createOffrng" data-role="page" data-theme="a"><!-- page -->
+          
+          <div data-role="header" style="overflow:hidden;" data-position="fixed">
+            <a href="index.html" data-icon="home" class="ui-btn-left" style="background-color:#000000">Home</a>
+            <h1 style="vertical-align: middle; text-align: center;">Add an Offering</h1>
+            <a href="#" data-icon="carat-l" class="ui-btn-right" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
+         </div><!--/header-->
+         
+           <div class="upage-content" id="mainsub" style="margin-left:20px; margin-right:20px;"><!-- upage-content -->
+           	<div>
+            	<h4>Create Offering Profile</h4>
+            </div>
+           		<figure class="figure-align">
+                	<img src="images/placeholder_image1.png" height="50%" width="100%">
+                    <figcaption data-position="bottom"></figcaption>
+                 </figure>
+                 
+              	<form action="createProfile.php" method="post" id="register" data-ajax="false" data-theme="a">
+              		<div style="padding:5px 5px;">
+                    	<input type="button" value="Upload Image or Logo">
+					<div style="height:10px;"></div>
+                  	<div>
+                    	<label for="offeringName">Offering Name</label>
+                    	<input type="text" id="offeringName" name="offeringName" placeholder="Name" >
+                    	<input type="hidden" value="$offrngName">
+                  	</div>
+					<div>
+                    	<label for="offrngDesc">Description</label>
+    					<textarea name="offrngDesc" id="offrngDesc"></textarea>
+                    	<input type="hidden" value="$offrngDesc">
+                    </div>
+                    <div>
+                    	<label for="offrngDesc">Fee - Product/Service Cost or Free</label>
+    					<textarea name="fee" id="fee"></textarea>
+                    	<input type="hidden" value="$fee">
+                    </div>
+								
+					<div style="height:100%; text-align:justify;" >     
+                        	<legend>Willing to Barter?</legend>
+                            <input type="hidden" value="$barter">
+                        	<input type="radio" name="Y" id="Y" data-theme="a">
+    						<label for="Y">Yes</label>
+                            <input type="radio" name="N" id="N" data-theme="a">
+    						<label for="N">No</label>
+                    </div>
+						
+                     <div>
+                    	<label for="offrngURL">Web Address <br/>(if different from main website)</label>
+    					<input type="text" id="offrngURL" name="offrngURL" >
+                    	<input type="hidden" value="$offrngURL">
+                    </div>   
+                        
+					<div style="margin-top:10px;">
+                  			<button type="submit" id="offrngSave" class="ui-shadow ui-btn ui-corner-all ui-mini">Save Offering Profile</button>
+                  	</div>
+                    </div>
+                                </form>
+							</div>
+							<span class="uib_shim"></span>
+						</div>
+					</div>
+                    </div>
+					<!-- /upage-content -->
+
+					 <div data-role="footer" style="overflow:hidden;" data-position="fixed">
+			<div data-role="navbar">
+        		<ul>
+            		<li><a href="" style="background-color:#000000">FAQ</a></li>
+            		<li><a href="ReportProblem.html" style="background-color:#000000">Report A Problem</a></li>
+        		</ul>
+    		</div><!-- /navbar -->
+		  </div><!-- /footer -->
+        
+        </div><!-- /page -->
+        </div><!-- /uwrap -->
+    </body>
+</html>

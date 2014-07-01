@@ -11,7 +11,7 @@
 	require('providerList2.php')
     require('catList2.php')
 	?> 
-	<title>Neighbor2Neighbor Directory</title>    
+	<title>Register</title>
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 	<script type="text/javascript" src="utils.js"></script>
@@ -33,13 +33,13 @@
          
            <div class="upage-content" id="mainsub" style="margin-left:20px; margin-right:20px;"><!-- upage-content -->
            	<div>
-            	<h4>Create Profile</h4>
+            	<h4>Create Provider Profile</h4>
             </div>
            		<figure class="figure-align">
                 	<img src="images/placeholder_image1.png" height="50%" width="100%">
                     <figcaption data-position="bottom"></figcaption>
                  </figure>
-              	<form action="createProfile.php" method="post" id="register" data-ajax="false">
+              	<form action="createProfile.php" method="post" id="register" data-ajax="false" data-theme="a">
               		<div style="padding:5px 5px;">
                     	<input type="button" value="Upload Image or Logo">
 					<div style="height:10px;"></div>
@@ -121,15 +121,30 @@
                         <option>Watson-McCord</option>
                       </select>
                     </div>
-                    <div style="height:40px;"></div> 
-                  <div>
-                  <button type="submit" id="profSave" class="ui-shadow ui-btn ui-corner-all ui-mini">Save Profile</button>
-                  </div>
+                    
+                    <div style="margin-top:20px;"><!-- this selection only shown if account type is organizational -->
+                    	<label for="map">Enter Code for Embedded Map</label>
+                    	<input type="url" id="map name="map">
+                    	<input type="hidden" value="$map"> 
+                  	</div>
+                    
+                    <div style="height:100%; text-align:justify;" >
+                        	<p> COPYRIGHT NOTICE: <br>Copyright 2014 - Kheprw Institute Open Source Activism All Rights Reserved. The Neighbor2Neighbor App may be used and modified free of charge by anyone so long as this copyright notice and the comments above remain intact. By using this app you agree to indemnify Kheprw Institute from any liability that might arise from its use.
+Selling the code for this app without prior written consent is expressly forbidden. In all cases copyright and header must remain intact. By checking below you agree to abide by these terms.</p>      
+                     
+                        	<legend>Agree to the terms:</legend>
+                        	<input type="checkbox" name="agree" id="agree" data-theme="a">
+    						<label for="agree">I agree</label>
+                    </div>
+                     
+                  	<div>
+                  			<button type="submit" id="profSave" class="ui-shadow ui-btn ui-corner-all ui-mini">Save Profile</button>
+                  	</div>
                   </div>
                   </form>
                </div> <!-- /upage content -->
 
-          <div data-role="footer" style="overflow:hidden;" data-position="fixed">
+          <div data-role="footer" style="overflow:hidden;">
 			<div data-role="navbar">
         		<ul>
             		<li><a href="" style="background-color:#000000">FAQ</a></li>
