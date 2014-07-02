@@ -29,67 +29,46 @@
       <div id="mainpage" data-role="page" data-theme="a"><!-- mainpage -->
         <div class="upage-outer">
           
-          <div data-role="header" style="overflow:hidden;">
+          <div data-role="header" style="overflow:hidden;" data-position="fixed">
             <a href="#" data-icon="carat-l" class="ui-btn-left" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
             <h1 style="vertical-align: middle; text-align: center;">Kheprw</h1>
             <a href="#" data-icon="action" class="ui-btn-right" style="background-color:#000000">Sign Out</a>
          </div><!--/header-->
           
-         <div id="uib_page_2sub" class="upage-content ">
-            <div class="grid grid-pad urow uib_row_15 row-height-15" data-uib="layout/row" data-ver="0">
-              <div class="col uib_col_29 col-0_12-12" data-uib="layout/col" data-ver="0">
-                <div class="widget-container content-area vertical-col">
-
-                  <div class="widget uib_w_70 scale-image d-margins" data-uib="media/img" data-ver="0">
+         <div id="uib_page_2sub" class="upage-content">
+                  <div>
                     <figure class="figure-align" align="left" style="margin-left:30px; margin-top:10px;">
                      <img src="images/ki_trsp.png" width="128" height="128" alt="KI Logo">
                     </figure>
                   </div>
-                  <div class="widget uib_w_73 d-margins phone" data-uib="media/text" data-ver="0">
-                    <div class="widget-container left-receptacle"></div>
-                    <div class="widget-container right-receptacle"></div>
-                    <div style="margin-left:30px; margin-right: 30px;">
+                  
+                   <div style="margin-left:20px; margin-right: 20px;">
                       <p> <a href="http://www.kieocenter.org">www.kieocenter.org</a></p>
-                      <a href="#" class="ui-btn ui-corner-all" data-mini="true">Contact Us</a>
+                      <a href="#popupContact" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-mini ui-btn-a" data-transition="pop" data-theme="a">Contact Us</a>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <span class="uib_shim"></span>
-            </div>
+                  
+                  	<div style="height:10px;"></div>
 
-            <div class="grid grid-pad urow uib_row_16 row-height-16" data-uib="layout/row" data-ver="0">
-              <div class="col uib_col_30 col-0_12-12" data-uib="layout/col" data-ver="0">
-                <div class="widget-container content-area vertical-col">
-
-                  <div class="widget uib_w_72 d-margins" data-uib="media/text" data-ver="0">
-                    <div class="widget-container left-receptacle"></div>
-                    <div class="widget-container right-receptacle"></div>
-                    <div style="margin-left:30px;">
+                  	<div style="margin-left:30px;">
                       <p> 3549 Boulevard Place<br>
                           P.O. Box 88856<br>
                           Indianapolis, IN 46208<br>
                           info@kheprw.org</p>
                     </div>
-                    <div class="widget uib_w_94 d-margins iframe-size" data-uib="media/iframe" data-ver="0" style="margin-left:30px; margin-right:30px;">
-                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.4096585690654!2d-86.16358089999999!3d39.82023199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b514675002ba7%3A0x767a2b5646e17170!2s3549+Boulevard+Pl!5e0!3m2!1sen!2sus!4v1400644897818" height="300" width="100%" frameborder="0" style="border:0" align="left"></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-             <span class="uib_shim"></span>
-                        
-            <div class="grid grid-pad urow uib_row_18 row-height-18" data-uib="layout/row" data-ver="0" style="margin-left:20px; margin-right:20px; margin-top: 50px;">
-              <div class="col uib_col_33 col-0_12-12" data-uib="layout/col" data-ver="0">
-                <div class="widget-container content-area vertical-col">
-                 	<div style="height=50px;"data-ver="0">
-                      <p>What We Offer</p>
-            	  	</div>
-                 </div>
+                    
+                    <div style="margin-left:30px; margin-right:30px;">
+                   		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.4096585690654!2d-86.16358089999999!3d39.82023199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b514675002ba7%3A0x767a2b5646e17170!2s3549+Boulevard+Pl!5e0!3m2!1sen!2sus!4v1400644897818" height="300" width="100%" frameborder="0" style="border:0" align="left">
+                        </iframe>
+                  	</div>
+                                       
+            		<div style="margin-left:20px; margin-right:20px; margin-top: 50px;">
+                    	<div style="height=50px;"data-ver="0">
+                      		<p>What We Offer</p>
+            	  		</div>
+                 	</div>
                
              
-                  <div data-role="collapsible-set" class="no_wrap widget uib_w_74 d-margins" data-uib="jquery_mobile/accordion" data-ver="0" data-collapsed-icon="plus" data-expanded-icon="minus" data-theme="a">
+                  <div data-role="collapsible-set" class="no_wrap widget uib_w_74 d-margins" data-uib="jquery_mobile/accordion" data-ver="0" data-collapsed-icon="plus" data-expanded-icon="minus" data-theme="a" style="margin-bottom:20px;">
                     <div data-role="collapsible" class="no_wrap widget uib_w_75" data-uib="jquery_mobile/collapsible" data-ver="0" data-mini="true" data-collapsed-icon="eye">
                       <h4>KI NuMedia</h4>
                       <div class="col uib_col_34 single-col" data-uib="layout/col" data-ver="0">
@@ -107,11 +86,11 @@
                           <span class="uib_shim"></span>
                         </div>
                         <div>
-                              <p>We offer graphic design, web/mobile app development, social media management and branding services.
+                              <p>We offer graphic design, web/mobile app development, social media management and branding services.</p>
                         </div>
                           </div>
                             <div class="widget-container right-receptacle">
-                              <a href="offeringDetail.php" class="widget uib_w_81 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true">More Info</a>
+                              <a href="offeringDetail.php" class="ui-btn" data-mini="true">More Info</a>
                             </div>
                             
                       </div>
@@ -163,26 +142,48 @@
                         </div>
                           </div>
                             <div class="widget-container right-receptacle">
-                              <a href="" class="widget uib_w_81 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true">More Info</a>
+                              <a href="" class="ui-btn" data-mini="true">More Info</a>
                             </div>
-                      </div>
+                      	</div>
+                        <div style="height:2opx;"></div>
                 </div>
+                
               
           <div data-role="footer" style="overflow:hidden;" data-position="fixed">
 			<div data-role="navbar">
         		<ul>
-            		<li style="width: 25%;"><a href="#" style="background-color:#000000">Home</a></li>
+            		<li style="width: 25%;"><a href="index.html" style="background-color:#000000">Home</a></li>
                     <li style="width: 25%;"><a href="#" style="background-color:#000000">FAQ</a></li>
             		<li style="width: 50%;"><a href="ReportProblem.html" style="background-color:#000000">Report Problem</a></li>
         		</ul>
     		</div><!-- /navbar -->
 		  </div><!-- /footer -->
-          </div>
-          </div>
-          </div>
-      </div>
+          
+      
+      
+      <div data-role="popup" id="popupContact" class="ui-corner-all">
+			<form action="" id="contactForm" method="post" style="background-color:#666666; color:#ffffff"
+        		<div style="padding:10px 20px;">
+            		<h3 align="center">Contact Form</h3>
+            		<a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            		<label for="cfname">Name:</label>
+            		<input type="text" name="cfname" id="cfname" data-clear-btn="true" />
+            		<input type="hidden" value="$cfname"/>
+            		<label for="cfemail">Email Address:</label>
+            		<input type="email" name="cfemail" id="cfemail" data-clear-btn="true" />
+            		<input type="hidden" value="$cfemail"/>
+            		<label for="textarea">Message:</label>
+					<textarea cols="40" rows="8" name="cfmessage" value="$cfmessage"></textarea>
+            		<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="margin-top: 10px;">Submit</button>
+        		</div>
+    		</form>
+		</div>
+
+      
     </div><!-- /upage-outer -->
     </div><!-- /mainpage -->
     </div><!-- /uwrap -->
+    </div>
+    </div>
   </body>
 </html>

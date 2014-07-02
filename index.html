@@ -26,7 +26,7 @@
     <div class="uwrap"><!-- uwrap -->
       <div id="mainpage" data-role="page" data-theme="a"><!-- mainpage -->
       
-          <div data-role="header" style="overflow:hidden;">
+          <div data-role="header" style="overflow:hidden;" data-position="fixed">
             <h1 style="vertical-align: middle; text-align: left; margin-left: 10px;">N2N Directory</h1>
             <a href="#popupSignIn" data-rel="popup" data-icon="gear" class="ui-btn-right" style="background-color:#000000">Sign In</a>
           </div>
@@ -55,7 +55,7 @@
                   <div class="ui-field-contain" style="margin-left:30px; margin-right:30px;">
                     <label for="pIndex" style="font-size:12px;">Index</label>
                     <input type="hidden" value="$pIndex">
-                      <select name="pIndex" id="pIndex" data-mini="true" data-ajax="true" onChange="window.location='providerList2.php?pIndex='+this.value" > 
+                      <select name="pIndex" id="pIndex" data-mini="true" data-ajax="true" onChange="window.location='indexList.php?pIndex='+this.value" > 
                         <option value="">Select...</option>
                         <option value="1">A-D</option>
                         <option value="2">E-H</option>
@@ -76,7 +76,7 @@
                   <div class="ui-field-contain" style="margin-left:30px; margin-right:30px;">
                     <label for="pCat" style="font-size:12px;">Categories</label>
                     <input type="hidden" value="$pCat">
-                      <select name="pCat" id="pCat" data-mini="true" onChange="window.location='catList2.php?pCat='+this.value" >
+                      <select name="pCat" id="pCat" data-mini="true" onChange="window.location='catList.php?pCat='+this.value" >
                         <option value="">Select...</option>
                         <option value="1">Auto, Truck</option>
                         <option value="2">Children &amp; Youth</option>

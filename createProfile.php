@@ -93,7 +93,7 @@
             	  	</div>
                  </div>
                  <div class="widget-container content-area vertical-col">
-                 <a href="#addOffering.html" class="ui-btn ui-corner-all">Add an Offering</a>
+                 <a href="addOffering.html" class="ui-btn ui-corner-all">Add an Offering</a>
                  <a href="#" class="ui-btn ui-corner-all">Update Provider Info</a>
                  <a href="index.html" class="ui-btn ui-corner-all">Search Providers</a>
                  </div>
@@ -102,7 +102,7 @@
           <div data-role="footer" style="overflow:hidden;" data-position="fixed">
 			<div data-role="navbar">
         		<ul>
-            		<li style="width: 25%;"><a href="#" style="background-color:#000000">Home</a></li>
+            		<li style="width: 25%;"><a href="index.html" style="background-color:#000000">Home</a></li>
                     <li style="width: 25%;"><a href="#" style="background-color:#000000">FAQ</a></li>
             		<li style="width: 50%;"><a href="ReportProblem.html" style="background-color:#000000">Report Problem</a></li>
         		</ul>

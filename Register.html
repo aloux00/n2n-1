@@ -39,10 +39,12 @@
                 	<img src="images/placeholder_image1.png" height="50%" width="100%">
                     <figcaption data-position="bottom"></figcaption>
                  </figure>
-              	<form action="createProfile.php" method="post" id="register" data-ajax="false" data-theme="a">
-              		<div style="padding:5px 5px;">
-                    	<input type="button" value="Upload Image or Logo">
-					<div style="height:10px;"></div>
+             <form action="createProfile.php" method="post" id="register" data-ajax="false" data-theme="a">
+              		<div style="margin-top:20px;">
+                    	<label for="file">Upload Image or Logo</label>
+						<input type="file" name="provdrImg" id="provdrImg" value="" data-theme="a">
+                        <input type="hidden" value="$provdrImg">
+                    </div>
                   	<div>
                     	<label for="profileName">Individual, Company or Organization</label>
                     	<input type="text" id="profileName" name="profileName" placeholder="Name" >
@@ -128,19 +130,19 @@
                     	<input type="hidden" value="$map"> 
                   	</div>
                     
-                    <div style="height:100%; text-align:justify;" >
-                        	<p> COPYRIGHT NOTICE: <br>Copyright 2014 - Kheprw Institute Open Source Activism All Rights Reserved. The Neighbor2Neighbor App may be used and modified free of charge by anyone so long as this copyright notice and the comments above remain intact. By using this app you agree to indemnify Kheprw Institute from any liability that might arise from its use.
-Selling the code for this app without prior written consent is expressly forbidden. In all cases copyright and header must remain intact. By checking below you agree to abide by these terms.</p>      
-                     
-                        	<legend>Agree to the terms:</legend>
+                    <div style="margin-top: 20px;">
+                    	<a href="#popupAgreement" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-mini ui-btn-a" data-transition="pop" data-theme="a">View User Agreement</a>
+                    </div>
+                    
+                    <div style="height:100%; text-align:justify;" >     
+                        	<legend>Click button to agree</legend>
                         	<input type="checkbox" name="agree" id="agree" data-theme="a">
     						<label for="agree">I agree</label>
                     </div>
                      
-                  	<div>
+                  	<div style="margin-top:20px;>
                   			<button type="submit" id="profSave" class="ui-shadow ui-btn ui-corner-all ui-mini">Save Profile</button>
                   	</div>
-                  </div>
                   </form>
                </div> <!-- /upage content -->
 
@@ -152,9 +154,17 @@ Selling the code for this app without prior written consent is expressly forbidd
         		</ul>
     		</div><!-- /navbar -->
 		  </div><!-- /footer -->
-        
-        </div><!-- /page -->
+          
+          <div data-role="popup" id="popupAgreement" style="text-align:justify;">
+          	<div data-role="header">
+            	<h3 align="center">USE TERMS</h3>
+            	<a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a></div>
+<p>Copyright 2014 - Kheprw Institute Open Source Activism All Rights Reserved. The Neighbor2Neighbor App may be used and modified free of charge by anyone so long as this user agreement and copyright notice remains intact. By using this app you agree to indemnify the Kheprw Institute from any liability that might arise from its use. Selling the code for this app without prior written consent is expressly forbidden. In all cases copyright and header must remain intact. By checking below you agree to abide by these terms.</p>
+			</div>
+          </div>
+         </div><!-- /page -->
         </div><!-- /uwrap -->
+        
     </body>
 </html>
 

@@ -69,7 +69,6 @@
                   <div style="height:20px;"></div>
                   <a href="#popupInquiry" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-mini ui-btn-a" data-transition="pop" data-theme="a" style="margin-left:30px; margin-right:30px;">Make Inquiry</a>
                   <div style="height:20px;"></div>
-                  <span class="uib_shim"></span>
                 </div>
               </div>
               <span class="uib_shim"></span>
@@ -90,25 +89,25 @@
 
         
         <div data-role="popup" id="popupInquiry" class="ui-corner-all">
-          <form action="" method="post" style="background-color:#666666; color:#ffffff">
-        <div style="padding:10px 20px;">
-            <h3 align="center">Inquiry Form</h3>
-            <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
-            <label for="name">Name:</label>
-            <input type="text" name="user" id="name" data-clear-btn="true" />
-            <input type="hidden" value="$name"/>
-            <label for="email" >Email Address:</label>
-            <input type="email" name="email" id="email" data-clear-btn="true" />
-            <input type="hidden" value="$email"/>
-            <label for="textarea">Message:</label>
-			<textarea cols="40" rows="8" name="message" value="$message"></textarea>
-            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="margin-top: 10px;">Submit</button>
-        </div>
-    </form>
-</div>
+			<form action="" method="post" style="background-color:#666666; color:#ffffff">
+        		<div style="padding:10px 20px;">
+            		<h3 align="center">Inquiry Form</h3>
+            		<a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            		<label for="name">Name:</label>
+            		<input type="text" name="user" id="name" data-clear-btn="true" />
+            		<input type="hidden" value="$name"/>
+            		<label for="email" >Email Address:</label>
+            		<input type="email" name="email" id="email" data-clear-btn="true" />
+            		<input type="hidden" value="$email"/>
+            		<label for="textarea">Message:</label>
+					<textarea cols="40" rows="8" name="message" value="$message"></textarea>
+            		<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="margin-top: 10px;">Submit</button>
+        		</div>
+    		</form>
+		</div>
 
       </div><!-- /uib_page2 -->
-      </div>
-      </div>
+      </div><!-- /mainpage -->
+      </div><!-- /uwrap -->
 </body>
 </html>
