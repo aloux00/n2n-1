@@ -5,11 +5,8 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
-	<link rel="stylesheet" href="themes/Neighborly.min.css">
-<?php
-require ('offeringDetail.php');
-?>       
-    <title>Add an Offering</title>
+	<link rel="stylesheet" href="themes/Neighborly.min.css">       
+    <title>Update Offering</title>
 	<script src="intelxdk.js"></script>
     <script src="cordova.js"></script>
     <script type="application/javascript" src="js/jquery.min.js"></script>
@@ -33,7 +30,7 @@ require ('offeringDetail.php');
           
           <div data-role="header" style="overflow:hidden;" data-position="fixed">
             <a href="home.html" data-icon="home" class="ui-btn-left" style="background-color:#000000">Home</a>
-            <h1 style="vertical-align: middle; text-align: center;">Add an Offering</h1>
+            <h1 style="vertical-align: middle; text-align: center;">Update Offering Details</h1>
             <a href="#" data-icon="carat-l" class="ui-btn-right" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
          </div><!--/header-->
          
@@ -50,36 +47,32 @@ require ('offeringDetail.php');
               		<div style="margin-top:20px;">
                     	<label for="file">Upload Image or Logo</label>
 						<input type="file" name="provdrImg" id="provdrImg" value="" data-theme="a">
-                        <input type="hidden" value="$provdrImg">
+                        <input type="hidden" value="$provdrImg" />
                     </div>
                   	<div>
                     	<label for="offeringName">Offering Name</label>
-                    	<input type="text" id="offeringName" name="offeringName" placeholder="Name" >
-                    	<input type="hidden" value="$offrngName">
+                    	<input type="text" id="offeringName" name="offeringName" value="$offrngName">
                   	</div>
 					<div>
                     	<label for="offrngDesc">Description</label>
-    					<textarea name="offrngDesc" id="offrngDesc"></textarea>
-                    	<input type="hidden" value="$offrngDesc">
+    					<textarea name="offrngDesc" id="offrngDesc" placeholder="$offrngDesc" value="$offrngDesc"></textarea>
                     </div>
                     <div>
                     	<label for="offrngDesc">Fee - Product/Service Cost or Free</label>
-    					<textarea name="fee" id="fee"></textarea>
-                    	<input type="hidden" value="$fee">
+    					<textarea name="fee" id="fee" value="$fee" placeholder="$fee" ></textarea>
                     </div>		
 					<div> 
                     	<fieldset data-role="controlgroup">
         					<legend>Willing to Barter?</legend>
-        					<input type="radio" name="barter" id="barter-a" value="on" checked="checked">
+        					<input type="radio" name="barter" id="barter-a" value="on">
         					<label for="barter-a">Yes</label>
-        					<input type="radio" name="barter" id="barter-b" value="off">
+        					<input type="radio" name="barter" id="barter-b" value="off" checked="checked">
         					<label for="barter-b">No</label>
     					</fieldset>
 					</div>	
                      <div>
                     	<label for="offrngURL">Web Address <br/>(if different from main website)</label>
-    					<input type="text" id="offrngURL" name="offrngURL" >
-                    	<input type="hidden" value="$offrngURL">
+    					<input type="text" id="offrngURL" name="offrngURL" value="$offrngURL">
                     </div>   
                         
 					<div style="margin-top:10px;">

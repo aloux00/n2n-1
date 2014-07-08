@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
-	<link rel="stylesheet" href="themes/Neighborly.min.css">   
+	<link rel="stylesheet" href="themes/Neighborly.min.css">    
     <title>View Profile</title>
 	<script src="intelxdk.js"></script>
     <script src="cordova.js"></script>
@@ -26,13 +25,13 @@
 
   <body>
     <div class="uwrap">
-      <div id="mainpage" data-role="page" data-theme="a"><!-- mainpage -->
+      <div id="viewProfile" data-role="page" data-theme="a"><!-- mainpage -->
         <div class="upage-outer">
           
           <div data-role="header" style="overflow:hidden;">
             <a href="#" data-icon="carat-l" class="ui-btn-left" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
             <h1 style="vertical-align: middle; text-align: center;">View Profile</h1>
-            <a href="#" data-icon="action" class="ui-btn-right" style="background-color:#000000">Sign Out</a>
+            <a href="logout.php" data-icon="action" class="ui-btn-right" style="background-color:#000000">Sign Out</a>
          </div><!--/header-->
           
          <div id="uib_page_2sub" class="upage-content ">
@@ -55,7 +54,7 @@
                   <div class="widget uib_w_73 d-margins phone" data-uib="media/text" data-ver="0">
                     <div style="margin-left:30px; margin-right: 30px;">
                       <p> <a href="http://www.kieocenter.org">www.kieocenter.org</a></p>
-                      <a href="#" class="ui-btn ui-corner-all" data-mini="true">Contact Us</a>
+                      <a href="#popupContact" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-mini ui-btn-a" data-transition="pop" data-theme="a">Contact Us</a>
                     </div>
                   </div>
                 </div>
@@ -94,7 +93,7 @@
                  </div>
                  <div class="widget-container content-area vertical-col">
                  <a href="addOffering.html" class="ui-btn ui-corner-all">Add an Offering</a>
-                 <a href="#" class="ui-btn ui-corner-all">Update Provider Info</a>
+                 <a href="providerUpdate.php" class="ui-btn ui-corner-all">Update Provider Info</a>
                  <a href="index.html" class="ui-btn ui-corner-all">Search Providers</a>
                  </div>
                   
@@ -112,6 +111,25 @@
           </div>
           </div>
       </div>
+      
+      <div data-role="popup" id="popupContact" class="ui-corner-all">
+			<form action="contact.php" id="contactForm" method="post" style="background-color:#666666; color:#ffffff">
+        		<div style="padding:10px 20px;">
+            		<h3 align="center">Contact Form</h3>
+            		<a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            		<label for="cfname">Name:</label>
+            		<input type="text" name="cfname" id="cfname" data-clear-btn="true" />
+            		<input type="hidden" value="$cfname"/>
+            		<label for="cfemail">Email Address:</label>
+            		<input type="email" name="cfemail" id="cfemail" data-clear-btn="true" />
+            		<input type="hidden" value="$cfemail"/>
+            		<label for="textarea">Message:</label>
+					<textarea cols="40" rows="8" name="cfmessage" value="$cfmessage"></textarea>
+            		<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="margin-top: 10px;">Submit</button>
+        		</div>
+    		</form>
+		</div>
+      
     </div><!-- /upage-outer -->
     </div><!-- /mainpage -->
     </div><!-- /uwrap -->

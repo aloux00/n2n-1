@@ -31,7 +31,7 @@
           <div data-role="header" data-theme="a">
              <h1 style="vertical-align: middle; text-align: center;">Offering</h1>
             <a href="#" data-icon="carat-l" class="ui-btn-left" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
-            <a href="#" data-icon="action" class="ui-btn-right" style="background-color:#000000;" data-transition="fade">Sign Out</a>
+            <a href="logout.php" data-icon="action" class="ui-btn-right" style="background-color:#000000;" data-transition="fade">Sign Out</a>
             </div><!--/header-->
           
           <div id="uib_page_2sub" class="upage-content ">
@@ -78,8 +78,7 @@
            <div data-role="footer" style="overflow:hidden;" data-position="fixed">
 			<div data-role="navbar">
         		<ul>
-            		<li style="width: 25%;"><a href="index.html" style="background-color:#000000">Home</a></li>
-                    <li style="width: 25%;"><a href="#" style="background-color:#000000">FAQ</a></li>
+                    <li style="width: 50%;"><a href="#" style="background-color:#000000">FAQ</a></li>
             		<li style="width: 50%;"><a href="ReportProblem.html" style="background-color:#000000">Report A Problem</a></li>
         		</ul>
     		</div><!-- /navbar -->
@@ -89,7 +88,7 @@
 
         
         <div data-role="popup" id="popupInquiry" class="ui-corner-all">
-			<form action="" method="post" style="background-color:#666666; color:#ffffff">
+			<form action="contact.php" id="inquiryForm" method="post" style="background-color:#666666; color:#ffffff">
         		<div style="padding:10px 20px;">
             		<h3 align="center">Inquiry Form</h3>
             		<a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>

@@ -11,7 +11,8 @@
 	require('providerDetail.php');
     require('indexList.php');
     require('catList.php');
-    require('logi.php')
+    require('user.php')
+    require('logout.php')
 	?> 
 	<title>Neighbor2Neighbor Directory</title>    
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -30,7 +31,7 @@
       
           <div data-role="header" style="overflow:hidden;" data-position="fixed">
             <h1 style="vertical-align: middle; text-align: left; margin-left: 10px;">N2N Directory</h1>
-            <a href="#popupSignIn" data-rel="popup" data-icon="gear" class="ui-btn-right" style="background-color:#000000">Sign In</a>
+            <a href="logout.php" data-icon="action" class="ui-btn-right" style="background-color:#000000; color:#ffffff;">Sign Out</a>
           </div>
           
           <div class="upage-content" id="mainsub"><!-- upage-content -->
@@ -107,7 +108,7 @@
 		  </div><!-- /footer -->
           
           <div data-role="popup" id="popupSignIn" class="ui-corner-all" style="margin-bottom:30px;">
-          <form data-ajax="false" action="login.php" method="post"  id="signIn" data-theme="a">
+          <form data-ajax="false" action="user.php" method="post"  id="signIn" data-theme="a">
         	<div style="padding:10px 20px;">
             <div data-role="header">
             <h3 align="center">Log In</h3>

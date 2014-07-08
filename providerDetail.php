@@ -6,7 +6,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
-	<link rel="stylesheet" href="themes/Neighborly.min.css">   
+	<link rel="stylesheet" href="themes/Neighborly.min.css">
     <title>Provider Detail</title>
 	<script src="intelxdk.js"></script>
     <script src="cordova.js"></script>
@@ -22,6 +22,9 @@
     <script type="application/javascript" src="justgage/js/justgage.min.js"></script>
     <script type="application/javascript" src="justgage/gauges.js"></script>
     <script type="application/javascript" src="js/jqm_subpage.js"></script>
+  
+  
+  
   </head>
 
   <body>
@@ -32,7 +35,7 @@
           <div data-role="header" style="overflow:hidden;" data-position="fixed">
             <a href="#" data-icon="carat-l" class="ui-btn-left" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
             <h1 style="vertical-align: middle; text-align: center;">Kheprw</h1>
-            <a href="#" data-icon="action" class="ui-btn-right" style="background-color:#000000">Sign Out</a>
+            <a href="logout.php" data-icon="action" class="ui-btn-right" style="background-color:#000000">Sign Out</a>
          </div><!--/header-->
           
          <div id="uib_page_2sub" class="upage-content">
@@ -152,8 +155,7 @@
           <div data-role="footer" style="overflow:hidden;" data-position="fixed">
 			<div data-role="navbar">
         		<ul>
-            		<li style="width: 25%;"><a href="index.html" style="background-color:#000000">Home</a></li>
-                    <li style="width: 25%;"><a href="#" style="background-color:#000000">FAQ</a></li>
+                    <li style="width: 50%;"><a href="#" style="background-color:#000000">FAQ</a></li>
             		<li style="width: 50%;"><a href="ReportProblem.html" style="background-color:#000000">Report Problem</a></li>
         		</ul>
     		</div><!-- /navbar -->
@@ -162,7 +164,7 @@
       
       
       <div data-role="popup" id="popupContact" class="ui-corner-all">
-			<form action="" id="contactForm" method="post" style="background-color:#666666; color:#ffffff"
+			<form action="contact.php" id="contactForm" method="post" style="background-color:#666666; color:#ffffff">
         		<div style="padding:10px 20px;">
             		<h3 align="center">Contact Form</h3>
             		<a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
