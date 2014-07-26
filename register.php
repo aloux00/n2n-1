@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 	<link rel="stylesheet" href="themes/Neighborly.min.css">       
-	<?php
-	require('dbx.php');
-	require('createProfile.php');
-	?> 
 	<title>Register</title>
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
@@ -18,24 +14,10 @@
 	<script type="application/javascript" src="js/index_user_scripts.js"></script>
 	<script type="application/javascript" src="popup/popup.min.js"></script>
     <script type="text/javascript"></script>
-<!-- this is Google Analytics Script -->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-24864839-4']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>         
 </head>
   
 <body>
-  	<div class="uwrap"><!-- uwrap -->
+  <div class="uwrap"><!-- uwrap -->
       <div id="register" data-role="page" data-theme="a"><!-- page -->
           
           <div data-role="header" style="overflow:hidden;" data-position="fixed">
@@ -52,10 +34,10 @@
                 	<img src="images/placeholder_image1.png" height="50%" width="100%">
                     <figcaption data-position="bottom"></figcaption>
                  </figure>
-             <form action="createProfile.php" method="post" id="register" data-ajax="true" data-theme="a">
+             <form action="createProfile.php" method="post" id="register" data-ajax="false" data-theme="a">
               		<div style="margin-top:20px;">
                     	<label for="file">Upload Image or Logo</label>
-						<input type="file" name="provdrImg" id="provdrImg" value="" data-theme="a">
+						<input type="file" name="provdrImg" id="provdrImg" data-theme="a">
                         <input type="hidden" value="$provdrImg">
                     </div>
                   	<div>
@@ -154,8 +136,9 @@
                             <input type="hidden" value="$agree">
                     </div>
                      
-            <div align="center"><input type="submit" data-mini="true" value="Save Profile" data-inline="true" data-role="button" data-ajax="false"></div>
-            
+                  	<div style="margin-top:20px;>
+                  			<button type="submit" id="profSave" class="ui-shadow ui-btn ui-corner-all ui-mini">Save Profile</button>
+                  	</div>
                   </form>
                </div> <!-- /upage content -->
 
@@ -176,7 +159,8 @@
 			</div>
           </div>
          </div><!-- /page -->
-        </div><!-- /uwrap -->          
+        </div><!-- /uwrap -->
+        
     </body>
 </html>
 

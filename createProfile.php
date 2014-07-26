@@ -21,6 +21,20 @@
     <script type="application/javascript" src="justgage/js/justgage.min.js"></script>
     <script type="application/javascript" src="justgage/gauges.js"></script>
     <script type="application/javascript" src="js/jqm_subpage.js"></script>
+<!-- this is Google Analytics Script -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24864839-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>         
   </head>
 
   <body>
@@ -132,6 +146,6 @@
       
     </div><!-- /upage-outer -->
     </div><!-- /mainpage -->
-    </div><!-- /uwrap -->
+    </div><!-- /uwrap -->  
   </body>
 </html>

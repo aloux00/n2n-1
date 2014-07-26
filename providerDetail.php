@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -22,11 +21,21 @@
     <script type="application/javascript" src="justgage/js/justgage.min.js"></script>
     <script type="application/javascript" src="justgage/gauges.js"></script>
     <script type="application/javascript" src="js/jqm_subpage.js"></script>
-  
-  
-  
-  </head>
+<!-- this is Google Analytics Script -->
+<script type="text/javascript">
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24864839-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>      
+  </head>
   <body>
     <div class="uwrap">
       <div id="mainpage" data-role="page" data-theme="a"><!-- mainpage -->
@@ -44,7 +53,10 @@
                      <img src="images/ki_trsp.png" width="128" height="128" alt="KI Logo">
                     </figure>
                   </div>
-                  
+                  <div>
+                  <p>The Kheprw Institute</p>
+                   
+                   
                    <div style="margin-left:20px; margin-right: 20px;">
                       <p> <a href="http://www.kieocenter.org">www.kieocenter.org</a></p>
                       <a href="#popupContact" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-mini ui-btn-a" data-transition="pop" data-theme="a">Contact Us</a>
@@ -178,14 +190,13 @@
 					<textarea cols="40" rows="8" name="cfmessage" value="$cfmessage"></textarea>
             		<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="margin-top: 10px;">Submit</button>
         		</div>
-    		</form>
-		</div>
-
-      
+    		</form> 
+      </div>
+         </div>
+        </div>
+      </div>
     </div><!-- /upage-outer -->
     </div><!-- /mainpage -->
     </div><!-- /uwrap -->
-    </div>
-    </div>
   </body>
 </html>

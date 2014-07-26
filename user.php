@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 	<link rel="stylesheet" href="themes/Neighborly.min.css">
 <?php
-/* username and password validated prior to user seeing this page */
+/* username and password validated prior to see this page */
 ?>       
     <title>Welcome Back</title>
 	<script src="intelxdk.js"></script>
@@ -24,20 +24,7 @@
     <script type="application/javascript" src="justgage/js/justgage.min.js"></script>
     <script type="application/javascript" src="justgage/gauges.js"></script>
     <script type="application/javascript" src="js/jqm_subpage.js"></script>
-<!-- this is Google Analytics Script -->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-24864839-4']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>     
+<title>Offering</title>
 </head>
 
 <body>
@@ -46,7 +33,7 @@
           
           <div data-role="header" style="overflow:hidden;" data-position="fixed">
             <h1 style="vertical-align: middle; text-align: center;">Welcome Back</h1>
-            <a href="logout.php" data-icon="action" class="ui-btn-right" style="background-color:#000000;" data-transition="fade" data-rel="back">Sign Out</a>
+            <a href="#" data-icon="action" class="ui-btn-right" style="background-color:#000000;" data-transition="fade" data-rel="back">Sign Out</a>
          </div><!--/header-->
          
            <div class="upage-content" id="mainsub" style="margin-left:20px; margin-right:20px;"><!-- upage-content -->
