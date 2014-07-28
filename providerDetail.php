@@ -89,11 +89,14 @@
                       <div class="col uib_col_34 single-col" data-uib="layout/col" data-ver="0">
                         <div class="widget-container content-area vertical-col">
 
-                          <div class="widget uib_w_79 d-margins link" data-uib="media/text" data-ver="0">
-                            <div class="widget-container left-receptacle"></div>
-                            <div class="widget uib_w_78 scale-image d-margins" data-uib="media/img" data-ver="0">
+    <div class="widget uib_w_79 d-margins link" data-uib="media/text" data-ver="0">
+      <div class="widget-container left-receptacle"></div>
+   <div class="widget uib_w_78 scale-image d-margins" data-uib="media/img" data-ver="0">
                             <figure class="figure-align">
-                              <img src="images/NuMedia Logo.png"  width="100%" alt="Logo" longdesc="images/NuMedia Logo.png">
+                          <div 
+  data-min-width-320='<img src="images/NuMediaLogo.png"  width="100px" alt="image @ 320+ viewports">'
+  data-min-width-961='<img src="images/NuMediaLogo.png"  width="100px" alt="image @ 320+ viewports">'
+  ></div> <img src="images/NuMediaLogo.png"  width="60%" alt="Logo" longdesc="images/NuMedia Logo.png">
 <figcaption data-position="bottom"></figcaption>
                             </figure>
                           </div>

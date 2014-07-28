@@ -55,13 +55,13 @@
 
                   <div class="widget uib_w_138 d-margins" data-uib="media/img" data-ver="0">
                     <figure class="figure-align" style="margin-left: 20px; margin-right: 20px;">
-                      <img src="images/NuMedia Logo.png" alt="Logo" longdesc="images/NuMedia Logo.png" width="100%" />
+                      <img src="images/NuMediaLogo.png" alt="Logo" longdesc="images/NuMedia Logo.png" width="60%" />
                       <figcaption data-position="bottom"></figcaption>
                     </figure>
                   </div>
                   <div class="widget uib_w_139" data-uib="media/img" data-ver="0">
                     <figure class="figure-align" style="margin-left: 20px; margin-right: 20px;">
-                      <img src="images/NuMediaBackgroundsml.jpg" height="40%" width="100%">
+                      <img src="images/BG-Image-4crp.jpg" height="50%" width="100%">
                       <figcaption data-position="bottom"></figcaption>
                     </figure>
                   </div>
@@ -92,7 +92,7 @@
 			<div data-role="navbar">
         		<ul>
                     <li style="width: 50%;"><a href="#" style="background-color:#000000">FAQ</a></li>
-            		<li style="width: 50%;"><a href="ReportProblem.html" style="background-color:#000000">Report A Problem</a></li>
+            		<li style="width: 40%;"><a href="ReportProblem.html" style="background-color:#000000">Report A Problem</a></li>
         		</ul>
     		</div><!-- /navbar -->
 		  </div><!-- /footer -->
