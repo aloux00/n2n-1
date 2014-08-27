@@ -21,6 +21,9 @@
     <script type="application/javascript" src="justgage/js/justgage.min.js"></script>
     <script type="application/javascript" src="justgage/gauges.js"></script>
     <script type="application/javascript" src="js/jqm_subpage.js"></script>
+    <!--[if lt IE 9]>
+<script src="html5shiv.js"></script>
+<![endif]-->
 <!-- this is Google Analytics Script -->
 <script type="text/javascript">
 
@@ -42,7 +45,7 @@
         <div class="upage-outer" id="uib_page_2">
             
           <div data-role="header" data-theme="a">
-             <h1 style="vertical-align: middle; text-align: center;">Offering</h1>
+             <h1>Offering</h1>
             <a href="#" data-icon="carat-l" class="ui-btn-left" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
             <a href="logout.php" data-icon="action" class="ui-btn-right" style="background-color:#000000;" data-transition="fade">Sign Out</a>
             </div><!--/header-->

@@ -13,6 +13,11 @@
 /* Globals */
 /* Font
 -----------------------------------------------------------------------------------------------------------*/
+.n2d{
+	vertical-align: middle;
+	text-align: left;
+	margin-left:10px
+}
 html {
 	font-size: 100%;
 }

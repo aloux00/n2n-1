@@ -45,7 +45,7 @@
       <div id="createOffrng" data-role="page" data-theme="a"><!-- page -->
           
           <div data-role="header" style="overflow:hidden;" data-position="fixed">
-            <h1 style="vertical-align: middle; text-align: center;">Welcome Back</h1>
+            <h1 style="text-align:left; margin-left:10px;">Welcome Back</h1>
             <a href="logout.php" data-icon="action" class="ui-btn-right" style="background-color:#000000;" data-transition="fade" data-rel="back">Sign Out</a>
          </div><!--/header-->
          

@@ -14,6 +14,9 @@
 	<script type="application/javascript" src="js/index_user_scripts.js"></script>
 	<script type="application/javascript" src="popup/popup.min.js"></script>
     <script type="text/javascript"></script>
+    <!--[if lt IE 9]>
+<script src="html5shiv.js"></script>
+<![endif]-->
 <!-- this is Google Analytics Script -->
 <script type="text/javascript">
 
@@ -35,7 +38,7 @@
           
           <div data-role="header" style="overflow:hidden;" data-position="fixed">
             <a href="index.html" data-icon="home" class="ui-btn-left" style="background-color:#000000">Home</a>
-            <h1 style="vertical-align: middle; text-align: center;">Update Profile</h1>
+            <h1>Update Profile</h1>
             <a href="#" data-icon="carat-l" class="ui-btn-right" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
          </div><!--/header-->
          

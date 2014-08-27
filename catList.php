@@ -14,6 +14,9 @@
 	<script type="application/javascript" src="js/jquery.min.js"></script>
 	<script type="application/javascript" src="js/index_user_scripts.js"></script>
 	<script type="application/javascript" src="popup/popup.min.js"></script>
+    <!--[if lt IE 9]>
+<script src="html5shiv.js"></script>
+<![endif]-->
 <!-- this is Google Analytics Script -->
 <script type="text/javascript">
 
@@ -36,7 +39,7 @@
 
  		<div data-role="header" style="overflow:hidden;">
             <a href="#" data-icon="carat-l" class="ui-btn-left" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
-            <h1 style="vertical-align: middle; text-align: center;">Providers</h1>
+            <h1>Providers</h1>
             <a href="logout.php" data-icon="action" class="ui-btn-right" style="background-color:#000000">Sign Out</a>
          </div>
           

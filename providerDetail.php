@@ -21,6 +21,9 @@
     <script type="application/javascript" src="justgage/js/justgage.min.js"></script>
     <script type="application/javascript" src="justgage/gauges.js"></script>
     <script type="application/javascript" src="js/jqm_subpage.js"></script>
+    <!--[if lt IE 9]>
+<script src="html5shiv.js"></script>
+<![endif]-->
 <!-- this is Google Analytics Script -->
 <script type="text/javascript">
 
@@ -43,7 +46,7 @@
           
           <div data-role="header" style="overflow:hidden;" data-position="fixed">
             <a href="#" data-icon="carat-l" class="ui-btn-left" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
-            <h1 style="vertical-align: middle; text-align: center;">Kheprw</h1>
+            <h1>Kheprw</h1>
             <a href="logout.php" data-icon="action" class="ui-btn-right" style="background-color:#000000">Sign Out</a>
          </div><!--/header-->
           
@@ -54,7 +57,7 @@
                     </figure>
                   </div>
                   <div>
-                  <p>The Kheprw Institute</p>
+                  <p style="margin-left: 15px;">The Kheprw Institute</p>
                    
                    
                    <div style="margin-left:20px; margin-right: 20px;">
