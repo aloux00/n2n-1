@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_POST['submitted'])) { 
 foreach($_POST AS $key => $value) { $_POST[$key] = mysql_real_escape_string($value); } 
 $sql = "INSERT INTO `User` ( `NeighborhoodId` ,  `RoleId` ,  `FirstName` ,  `LastName` ,  `Password` ,  `Email` ,  `Phone` ,  `ProfileImage` ,  `IsActive` ,  `LastLoginDate` ,  `LoginCount` ,  `CreatedDate` ,  `CreatedBy` ,  `ConfirmedDate` ,  `ModifiedDate` ,  `ModifiedBy`  ) VALUES(  '{$_POST['NeighborhoodId']}' ,  '{$_POST['RoleId']}' ,  '{$_POST['FirstName']}' ,  '{$_POST['LastName']}' ,  '{$_POST['Password']}' ,  '{$_POST['Email']}' ,  '{$_POST['Phone']}' ,  '{$_POST['ProfileImage']}' ,  '{$_POST['IsActive']}' ,  '{$_POST['LastLoginDate']}' ,  '{$_POST['LoginCount']}' ,  '{$_POST['CreatedDate']}' ,  '{$_POST['CreatedBy']}' ,  '{$_POST['ConfirmedDate']}' ,  '{$_POST['ModifiedDate']}' ,  '{$_POST['ModifiedBy']}'  ) "; 

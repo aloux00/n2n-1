@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 echo "<table border=1 >"; 
 echo "<tr>"; 
 echo "<td><b>NeighborhoodId</b></td>"; 

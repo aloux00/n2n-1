@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_GET['MessageId']) ) { 
 $MessageId = (int) $_GET['MessageId']; 
 if (isset($_POST['submitted'])) { 

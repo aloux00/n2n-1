@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_GET['UserId']) && isset($_GET['ProviderId']) && isset($_GET['RoleId']) ) { 
 
 	$UserId = (int) $_GET['UserId']; 

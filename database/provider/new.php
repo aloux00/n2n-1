@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_POST['submitted'])) { 
 foreach($_POST AS $key => $value) { $_POST[$key] = mysql_real_escape_string($value); } 
 $sql = "INSERT INTO `Provider` ( `NeighborhoodId` ,  `ProviderType` ,  `Name` ,  `Street1` ,  `Street2` ,  `City` ,  `State` ,  `Zip` ,  `Contact` ,  `Email` ,  `Phone` ,  `Url` ,  `ProfileImage` ,  `HoursAvailable` ,  `IsActive` ,  `Description` ,  `CreatedDate` ,  `CreatedBy` ,  `ModifiedDate` ,  `ModifiedBy`  ) VALUES(  '{$_POST['NeighborhoodId']}' ,  '{$_POST['ProviderType']}' ,  '{$_POST['Name']}' ,  '{$_POST['Street1']}' ,  '{$_POST['Street2']}' ,  '{$_POST['City']}' ,  '{$_POST['State']}' ,  '{$_POST['Zip']}' ,  '{$_POST['Contact']}' ,  '{$_POST['Email']}' ,  '{$_POST['Phone']}' ,  '{$_POST['Url']}' ,  '{$_POST['ProfileImage']}' ,  '{$_POST['HoursAvailable']}' ,  '{$_POST['IsActive']}' ,  '{$_POST['Description']}' ,  '{$_POST['CreatedDate']}' ,  '{$_POST['CreatedBy']}' ,  '{$_POST['ModifiedDate']}' ,  '{$_POST['ModifiedBy']}'  ) "; 

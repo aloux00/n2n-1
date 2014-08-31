@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_GET['RoleId']) ) { 
 $RoleId = (int) $_GET['RoleId']; 
 if (isset($_POST['submitted'])) { 

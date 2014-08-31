@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_GET['UserId']) ) { 
 $UserId = (int) $_GET['UserId']; 
 if (isset($_POST['submitted'])) { 
