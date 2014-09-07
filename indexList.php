@@ -7,9 +7,8 @@
     <title>Provider Index List</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 	<link rel="stylesheet" href="themes/Neighborly.min.css">      
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="utils.js"></script>
 	<script type="application/javascript" src="js/jquery.min.js"></script>
 	<script type="application/javascript" src="js/index_user_scripts.js"></script>

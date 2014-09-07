@@ -3,6 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Log Out</title>
+<!--[if lt IE 9]>
+<script src="html5shiv.js"></script>
+<![endif]-->
 <!-- this is Google Analytics Script -->
 <script type="text/javascript">
 

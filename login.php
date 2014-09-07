@@ -10,20 +10,18 @@
 /* username and password validated prior to user seeing this page */
 ?>       
     <title>Welcome Back</title>
-	<script src="intelxdk.js"></script>
-    <script src="cordova.js"></script>
-    <script type="application/javascript" src="js/jquery.min.js"></script>
-    <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
-    <script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
-    <script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
-    <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
-    <script type="application/javascript" src="sidebar/js/swipe.js"></script>
-    <script type="application/javascript" src="popup/popup.min.js"></script>
-    <script type="application/javascript" src="js/index_user_scripts.js"></script>
-    <script type="application/javascript" src="justgage/js/raphael.min.js"></script>
-    <script type="application/javascript" src="justgage/js/justgage.min.js"></script>
-    <script type="application/javascript" src="justgage/gauges.js"></script>
-    <script type="application/javascript" src="js/jqm_subpage.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<script type="text/javascript" src="utils.js"></script>
+	<script type="application/javascript" src="js/jquery.min.js"></script>
+	<script type="application/javascript" src="js/index_user_scripts.js"></script>
+	<script type="application/javascript" src="popup/popup.min.js"></script>
+    <script type="text/javascript"></script>
+    <script src="jquery.validate.js"></script>
+    <script type="text/javascript"></script>
+    <!--[if lt IE 9]>
+<script src="html5shiv.js"></script>
+<![endif]-->
 <!-- this is Google Analytics Script -->
 <script type="text/javascript">
 
@@ -63,7 +61,7 @@
 					
                     </div><!-- /upage-content -->
 
-					<div data-role="footer" style="overflow:hidden;">
+					<div data-role="footer" style="overflow:hidden;" data-position="fixed">
 						<div data-role="navbar">
         					<ul>
             					<li><a href="" style="background-color:#000000">FAQ</a></li>
