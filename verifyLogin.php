@@ -1,3 +1,25 @@
+<?php
+	require './database/user/functions.php';
+	if (isset ($_REQUEST['loginUsrname'],$_REQUEST['loginUsrpasswrd'])) {
+		$loginUsrname = $_REQUEST['loginUsrname'];
+		$loginUsrpasswrd = $_REQUEST['loginUsrpasswrd'];
+		$userDS = getUserByEmailPswd( $loginUsrname, $loginUsrpasswrd );
+		
+		if ($userDS) {
+			if (mysql_num_rows($userDS) == 0) {
+				$msg = "The username or password you entered is incorrect."; 
+			} else {
+				header('Location: login.php');
+			}
+		} else {
+			$msg = "There has been an error validating your account."; 
+		}
+	} else { 
+		$loginUsrname == "";
+		$loginUsrpasswrd == "";
+		$msg = "The username or password you entered is incorrect."; 
+	}
+?>          
 <!Doctype html>
 <head>
 <meta charset="UTF-8">
@@ -6,23 +28,9 @@
 <title>Verify Login</title>
 </head>
   <body>
-       <?php
-	   if (isset ($_REQUEST['loginUsrname'],$_REQUEST['loginUsrpasswrd'])) {
-    		$loginUsrname = $_REQUEST['loginUsrname'];
-			$loginUsrpasswrd = $_REQUEST['loginUsrpasswrd'];
-       } else { 
-    		$loginUsrname == "";
-			$loginUsrpasswrd == "";
-	   }
- 	   
-	   /* function to retreive $userName and $userPassword goes here */
-	   
-	   if ($loginUsrname == $userName && $loginUsrpasswrd == $userPassword) {
-   			 header('Location: login.php'); 
-       } else {
-		   	echo('The username or password you entered is incorrect'); 
-}
-?>          
+<?php
+	echo $msg;
+?>
   </body>
 </html>
 

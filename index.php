@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 	<link rel="stylesheet" href="themes/Neighborly.min.css">
+    <link rel="stylesheet" href="N2N.css">
     <style>
 	.n2d {
 	   vertical-align: middle;
@@ -17,6 +18,11 @@
 	   margin-left: 10px;
     }
 	</style>	     
+    <?php
+	require './database/user/functions.php';
+	/* require('dbx.php'); */
+	/* require('createUserAcct.php'); */
+	?> 
 	<title>Neighbor2Neighbor Directory</title>    
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
@@ -24,7 +30,7 @@
 	<script type="application/javascript" src="js/jquery.min.js"></script>
 	<script type="application/javascript" src="js/index_user_scripts.js"></script>
 	<script type="application/javascript" src="popup/popup.min.js"></script>
-    <script type="text/javascript"></script>
+    <script src="jquery.validate.js"></script>
     <!--[if lt IE 9]>
 <script src="html5shiv.js"></script>
 <![endif]-->
@@ -100,18 +106,18 @@
                     <input type="hidden" value="$pCat">
                       <select name="pCat" id="pCat" data-mini="true" onChange="window.location='providerList.php?category='+this.value" >
                         <option value="">Select...</option>
-<?php 
-	if ($dsCat) {
-		while($row = mysql_fetch_array($dsCat)){ 
-			foreach($row AS $key => $value) { $row[$key] = stripslashes($value); }
-	            $out .= "<option value=" . $row['CategoryId'] . ">" . $row['Name'] . "</option>";
-		} 
-	} else {
-		$out = 'Error.';
-	}
-
-	echo $out;
-?>						
+							<?php 
+                                if ($dsCat) {
+                                    while($row = mysql_fetch_array($dsCat)){ 
+                                        foreach($row AS $key => $value) { $row[$key] = stripslashes($value); }
+                                            $out .= "<option value=" . $row['CategoryId'] . ">" . $row['Name'] . "</option>";
+                                    } 
+                                } else {
+                                    $out = 'Error.';
+                                }
+                            
+                                echo $out;
+                            ?>						
                       </select>
                     </div> 
                    
@@ -131,22 +137,61 @@
     		</div><!-- /navbar -->
 		  </div><!-- /footer -->
           
-          <div data-role="popup" id="popupSignIn" class="ui-corner-all" style="margin-bottom:30px;">
-          <form data-ajax="false" action="login.php" method="post"  id="signIn" data-theme="a">
+          <div data-role="popup" id="popupSignIn" class="ui-corner-all" style="margin-bottom:30px; background-color:#666666; color:#ffffff;">
+          <script type="text/javascript">
+			$(document).ready(function() {
+				$('#signIn').validate({
+				rules: {
+					loginUsrname: {
+						required: true,
+						minlength: 6, 
+					},
+					loginUsrpasswrd: {
+						required: true,
+						minlength: 6, 
+					}
+				},
+				messages: {
+					loginUsrname: {
+						required: "Please enter a username."
+					},
+					loginUsrpasswrd: {
+						required: "Please enter a password."
+					},
+				errorPlacement: function (error, element) {
+					error.appendTo(element.parent().prev());
+				}, 
+				submitHandler: function (form) {
+					$(':mobile-pagecontainer').pagecontainer('change', '#success', {
+						reload: false
+					});
+					return false;
+				}
+				}
+			});
+			});
+		</script>      
+        <form method="post" action="verifyLogin.php"  id="signIn" data-theme="a">
         	<div style="padding:10px 20px;">
-            <div data-role="header">
-            <h3 align="center">Log In</h3>
-            <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a></div>
-        		<h4>If you do not have an account, click <a href="register.html">here </a>to register. </h4>
-            	<div style="height:10px;"></div>
-            	<label for="usrname" class="ui-hidden-accessible">Username:</label>
-            	<input type="text" name="usrname" id="usrname" placeholder="username"/>
-                <input type="hidden" value="$usrname">
-            	<label for="passwrd" class="ui-hidden-accessible">Password:</label>
-            	<input type="password" name="passwrd" id="passwrd" placeholder="password"/>
-                <input type="hidden" value="$passwrd">
-            	<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-a" style="margin-top: 10px;">Submit</button>
-        	</div>
+            
+            	<h3 align="center">Log In</h3>
+            	<a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            
+        	<h4>If you do not have an account, click <a href="userRegistration.html">here </a>to register. </h4>
+            <div style="height:10px;"></div>
+            <div>
+            	<label for="loginUsrname" class="ui-hidden-accessible">Username*</label>
+                <input type="text" id="loginUsrname" name="loginUsrname" placeholder="Username*">
+                <input type="hidden" value="$loginUsrname">    	
+            
+    			<label for="loginUsrpasswrd" class="ui-hidden-accessible">Password*</label>
+                <input type="password" id="loginUsrpasswrd" name="loginUsrpasswrd" placeholder="Password*">
+             	<input type="hidden" value="$loginUsrpasswrd">       	
+            </div>
+            <div align="center">
+            <input type="submit" data-mini="true" value="Submit" data-inline="true" data-role="button">
+            </div>
+        	</div><!-- /padding -->
     	</form>
 	</div>
           

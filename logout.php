@@ -22,5 +22,8 @@
 </script>     
 </head>
 <body>    
+<?php
+	echo "You have logged out."; 
+?>
 </body>
 </html>
