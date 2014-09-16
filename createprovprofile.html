@@ -17,13 +17,15 @@
 	<script type="text/javascript" src="utils.js"></script>
 	<script type="application/javascript" src="js/jquery.min.js"></script>
 	<script type="application/javascript" src="js/index_user_scripts.js"></script>
+    <script type="text/javascript"></script>
     <script src="jquery.validate.js"></script>
     <script type="text/javascript"></script>
     <!--[if lt IE 9]>
-	<script src="html5shiv.js"></script>
-	<![endif]-->
-	<!-- this is Google Analytics Script -->
-    <script type="text/javascript">
+<script src="html5shiv.js"></script>
+<![endif]-->
+<!-- this is Google Analytics Script -->
+<script type="text/javascript">
+
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-24864839-4']);
   _gaq.push(['_trackPageview']);
@@ -33,7 +35,8 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-	</script>         
+
+</script>         
 </head>
   
 <body>
@@ -118,29 +121,26 @@
            	<div>
             	<h4>Create Provider Profile</h4>
            </div>
-             <form enctype="multipart/form-data" action="createProfile.php" method="post" id="createProvdrForm" data-theme="a" data-ajax="false">
+             <form action="createProfile.php" method="post" id="createProvdrForm" data-theme="a">
               		 
-           		<figure class="figure-align style="width:100%; height: 30%">
-                	<img src="images/placeholder_logo_banner.png" width="100%" height="30%" alt="LogoOrBanner" style="display:block; margin: 0 auto;"/>
+           		<figure class="figure-align">
+                	<img src="images/placeholder_image1.png" height="20%" width="100%">
+                    <figcaption data-position="bottom"></figcaption>
                  </figure>
-                 <div style="margin-top:20px;">
-						<label for="file">Upload Logo</label>
-                        <input type="hidden" name="LMAX_FILE_SIZE" value="5000000">
-						<input type="file" name="provdrLogo" id="provdrLogo" data-theme="a" accept="provodrLogo/*" capture>
-                        <input type="hidden" value="$provdrLogo">
-                  
-                 </div>
+                    <div style="margin-top:20px;">
+                    	<label for="file">Upload Logo</label>
+						<input type="file" name="provdrLogo" id="provdrLogo" value="" data-theme="a">
+                    </div>
                     <div style="margin-top:20px;">
                     <figure class="figure-align">
-                	<img src="images/placeholder_imageOrvideo.png" width="80%" height="50%" alt="Image or Video" style="display:block; margin: 0 auto;"/>
+                	<img src="images/placeholder_image1.png" height="20%" width="100%">
                     <figcaption data-position="bottom"></figcaption>
                  </figure>
                     </div>
                     <div style="margin-top:20px;">
                     	<label for="file">Upload Image, Icon or Video</label>
-						<input type="hidden" name="MMAX_FILE_SIZE" value="5000000">
-                        <input type="file" name="provdrMedia" id="provdrMedia" data-theme="a" onChange="getFileName(this.files)">
-                        <input type="hidden" value="$provdrMedia">
+						<input type="file" name="provdrImg" id="provdrImg" value="" data-theme="a">
+                        <input type="hidden" value="$provdrImg">
                     </div>
                   	<div style="margin-top:20px;">
                     	<label for="provdrName">Company or Organization Name*</label>
@@ -158,10 +158,9 @@
                     	<input type="hidden" value="$provdraddress2"> 
                   	</div>
                   	<div>
-                    	<?php $providrCity='Indianapolis' ?> 
-                        <label for="provdrCity">City</label>
-                    	<input type="text" id="provdrCity" name="provdrCity" value="Indianapolis"> 
-                    	 <input type="hidden" value="$provdrCity"> 
+                    	<label for="provdrCity">City</label>
+                    	<input type="text" id="provdrCity" name="provdrCity" placeholder="Indianapolis">
+                    	<input type="hidden" value="$provdrCity"> 
                   	</div
                   	><div>
                     	<label for="provdrZipcode">Zip Code*</label>
@@ -170,7 +169,7 @@
                   	</div>
                   	<div>
                     	<label for="provdrUrl">Website Address</label>
-                    	<input type="url" id="provdrUrl" name="provdrUrl" value="http://www.">
+                    	<input type="url" id="provdrUrl" name="provdrUrl" >
                     	<input type="hidden" value="$provdrUrl"> 
                   	</div>
                     <div>
@@ -217,8 +216,8 @@
                   </div>
             <div align="center"><input type="submit" data-mini="true" value="Save Profile" data-inline="true" data-role="button"></div>
             
-        </form>
-      </div> <!-- /upage content -->
+                  </form>
+               </div> <!-- /upage content -->
 
           <div data-role="footer" style="overflow:hidden;">
 			<div data-role="navbar">

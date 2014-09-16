@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
 	<link rel="stylesheet" href="themes/Neighborly.min.css">
     <link rel="stylesheet" href="N2N.css">
     <style>
@@ -15,18 +15,19 @@
     }
 	</style>
     <?php
-	/* require('dbx.php'); */
+	require('dbx.php');
 	require('createUserAcct.php');
-	?> 
-		     
+	?>   
 	<title>Neighbor2Neighbor Directory</title>    
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 	<script type="text/javascript" src="utils.js"></script>
 	<script type="application/javascript" src="js/jquery.min.js"></script>
 	<script type="application/javascript" src="js/index_user_scripts.js"></script>
 	<script type="application/javascript" src="popup/popup.min.js"></script>
+    <script type="text/javascript"></script>
     <script src="jquery.validate.js"></script>
+    <script type="text/javascript"></script>
     <!--[if lt IE 9]>
 <script src="html5shiv.js"></script>
 <![endif]-->
@@ -72,22 +73,22 @@
                   <div class="ui-field-contain" style="margin-left:30px; margin-right:30px;">
          			<label for="search-1">Search by Name:</label>
          			<input type="hidden" value="$nmeSearch">
-					<input type="search" name="search-1" id="nmeSearch" onChange="window.location='providerList.php?keyword='+this.value">
+					<input type="search" name="search-1" id="nmeSearch" onChange="window.location='providerDetail.php?nmeSearch='+this.value">
     			</div>
                     <div style="height: 25px"></div>
                   
                   <div class="ui-field-contain" style="margin-left:30px; margin-right:30px;">
                     <label for="pIndex" style="font-size:12px;">Index</label>
                     <input type="hidden" value="$pIndex">
-                      <select name="pIndex" id="pIndex" data-mini="true" data-ajax="true" onChange="window.location='providerList.php?index='+this.value" > 
+                      <select name="pIndex" id="pIndex" data-mini="true" data-ajax="true" onChange="window.location='indexList.php?pIndex='+this.value" > 
                         <option value="">Select...</option>
-						<option value="A-D">A-D</option>
-                        <option value="E-H">E-H</option>
-                        <option value="I-L">I-L</option>
-                        <option value="M-P">M-P</option>
-                        <option value="Q-T">Q-T</option>
-                        <option value="U-X">U-X</option>
-                        <option value="Y-Z">Y-Z</option>                      
+                        <option value="1">A-D</option>
+                        <option value="2">E-H</option>
+                        <option value="3">I-L</option>
+                        <option value="4">M-P</option>
+                        <option value="5">Q-T</option>
+                        <option value="6">U-X</option>
+                        <option value="7">Y-Z</option>
                       </select>
                   </div>
                   
@@ -133,7 +134,7 @@
 	$(document).ready(function() {
 	$('#signIn').validate({
     rules: {
-        loginUsrname: {
+        loginEmailAddr: {
             required: true,
 			minlength: 6, 
         },
@@ -171,9 +172,9 @@
         	<h4>If you do not have an account, click <a href="userRegistration.html">here </a>to register. </h4>
             <div style="height:10px;"></div>
             <div>
-            	<label for="loginUsrname" class="ui-hidden-accessible">Username*</label>
-                <input type="text" id="loginUsrname" name="loginUsrname" placeholder="Username*">
-                <input type="hidden" value="$loginUsrname">    	
+            	<label for="loginEmailAddr" class="ui-hidden-accessible">Email Address*</label>
+                <input type="email" id="loginUsrname" name="loginEmailAddr" placeholder="Email Address*">
+                <input type="hidden" value="$loginEmailAddr">    	
             
     			<label for="loginUsrpasswrd" class="ui-hidden-accessible">Password*</label>
                 <input type="password" id="loginUsrpasswrd" name="loginUsrpasswrd" placeholder="Password*">

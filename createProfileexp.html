@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.4.min.css" />
 	<link rel="stylesheet" href="themes/Neighborly.min.css">
     <link rel="stylesheet" href="N2N.css">        
 	<?php
@@ -38,7 +38,7 @@
   
 <body>
   	<div class="uwrap"><!-- uwrap -->
-      <div id="createPvdrProfile" data-role="page" data-theme="a"><!-- page -->
+      <div data-role="page" id="page" data-theme="a"><!-- page -->
      		<script type="text/javascript">
 	$(document).ready(function() {
 	$('#createProvdrForm').validate({
@@ -118,17 +118,20 @@
            	<div>
             	<h4>Create Provider Profile</h4>
            </div>
-             <form enctype="multipart/form-data" action="createProfile.php" method="post" id="createProvdrForm" data-theme="a" data-ajax="false">
-              		 
-           		<figure class="figure-align style="width:100%; height: 30%">
-                	<img src="images/placeholder_logo_banner.png" width="100%" height="30%" alt="LogoOrBanner" style="display:block; margin: 0 auto;"/>
-                 </figure>
+             <form action="createProfile.php" method="post" id="createProvdrForm" data-theme="a" data-ajax="false">
+                 <div id="preview" style="width:75%;">
+				 </div>
+            	 <div style="width:60%; font-size:12px;">
+					<ul id="info" data-role="listview" data-inset="true">
+					</ul>
+            	 </div>
                  <div style="margin-top:20px;">
-						<label for="file">Upload Logo</label>
+						<button id="chooseFile">Choose Logo</button>
+                  </div>      
+				 <div class="hiddenfile">	
+                        <input type="file"  data-clear-btn="false" name="image" accept="image/*" capture>
                         <input type="hidden" name="LMAX_FILE_SIZE" value="5000000">
-						<input type="file" name="provdrLogo" id="provdrLogo" data-theme="a" accept="provodrLogo/*" capture>
                         <input type="hidden" value="$provdrLogo">
-                  
                  </div>
                     <div style="margin-top:20px;">
                     <figure class="figure-align">
@@ -138,8 +141,8 @@
                     </div>
                     <div style="margin-top:20px;">
                     	<label for="file">Upload Image, Icon or Video</label>
-						<input type="hidden" name="MMAX_FILE_SIZE" value="5000000">
-                        <input type="file" name="provdrMedia" id="provdrMedia" data-theme="a" onChange="getFileName(this.files)">
+						<input type="file" name="provdrMedia" id="provdrMedia" data-theme="a" onChange="getFileName(this.files)">
+                        <input type="hidden" name="MMAX_FILE_SIZE" value="5000000">
                         <input type="hidden" value="$provdrMedia">
                     </div>
                   	<div style="margin-top:20px;">
@@ -218,6 +221,7 @@
             <div align="center"><input type="submit" data-mini="true" value="Save Profile" data-inline="true" data-role="button"></div>
             
         </form>
+        
       </div> <!-- /upage content -->
 
           <div data-role="footer" style="overflow:hidden;">
@@ -229,7 +233,52 @@
     		</div><!-- /navbar -->
 		  </div><!-- /footer -->
          </div><!-- /page -->
-        </div><!-- /uwrap -->          
+        </div><!-- /uwrap --> 
+        <script>
+    $('#page').on('pageinit', function(){
+		$("#chooseFile").click(function(e){
+			e.preventDefault();
+			$("input[type=file]").trigger("click");
+		});
+		$("input[type=file]").change(function(){
+			var file = $("input[type=file]")[0].files[0];            
+			$("#preview").empty();
+			displayAsImage3(file, "preview");
+			$info = $("#info");
+			$info.empty();
+			if (file && file.name) {
+				$info.append("<li>name: <span>" + file.name + "</span></li>");
+			}
+			if (file && file.type) {
+				$info.append("<li>type: <span>" + file.type + "</span></li>");
+			}
+			if (file && file.size) {
+				$info.append("<li>size: <span>" + file.size + " bytes</span></li>");
+			}
+			if (file && file.date_modified) {
+				$info.append("<li>date_modified: <span>" + file.date_modified + "</span></li>");
+			}
+			$info.listview("refresh");
+		});
+    });
+
+    function displayAsImage3(file, containerid) {
+		if (typeof FileReader !== "undefined") {
+			var container = document.getElementById(containerid),
+			    img = document.createElement("img"),
+			    reader;
+			container.appendChild(img);
+			reader = new FileReader();
+			reader.onload = (function (theImg) {
+				return function (evt) {
+					theImg.src = evt.target.result;
+				};
+			}(img));
+			reader.readAsDataURL(file);
+		}
+	}
+	
+    </script>         
     </body>
 </html>
 

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.4.min.css" />
 	<link rel="stylesheet" href="themes/Neighborly.min.css">
     <link rel="stylesheet" href="N2N.css">
 	<?php
@@ -13,12 +13,11 @@
 	?> 
 	<title>Register</title>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 	<script type="text/javascript" src="utils.js"></script>
 	<script type="application/javascript" src="js/jquery.min.js"></script>
 	<script type="application/javascript" src="js/index_user_scripts.js"></script>
 	<script type="application/javascript" src="popup/popup.min.js"></script>
-    <script type="text/javascript"></script>
     <script src="jquery.validate.js"></script>
     <script type="text/javascript"></script>
     <!--[if lt IE 9]>
@@ -58,6 +57,11 @@
         userEmail: {
             required: true
         },
+		userPassword: {
+            required: true,
+			minlength: 6, 
+			equalTo: "#verifyuserPassword",
+        },
 		userNhood: {
 			required: true
     	},
@@ -78,6 +82,9 @@
 		
         userEmail: {
             required: "Please enter your email."
+        },
+		userPassword: {
+            required: "Please enter a password."
         },
 		userNhood: {
             required: "Please select neighborhood."
@@ -106,7 +113,7 @@
          
            <div data-role="content" style="margin-left:20px; margin-right:20px;"><!-- upage-content -->
            <div>
-             <form action="createUserAccount.php" method="post" id="registerForm" data-theme="a">
+             <form action="Success.php" method="post" id="registerForm" data-theme="a">
                   	<div style="margin-top:20px;">
                     	<label for="Name">Name*</label>
                     	<input type="text" id="Name" name="Name">
@@ -128,15 +135,26 @@
                     	<input type="hidden" value="$userZipcode"> 
                   	</div>
                     <div>
-                    	<label for="email">Email Address*</label>
-                    	<input type="email" id="userEmail" name="userEmail">
-                    	<input type="hidden" value="$userEmail"> 
-                  	</div>	
-                  	<div>
                     	<label for="phone">Phone #</label>
                     	<input type="tel" id="userPhone" name="userPhone" >
                     	<input type="hidden" value="$userPhone"> 
                   	</div>
+                    <div>
+                    	<label for="email">Email Address*</label>
+                    	<input type="email" id="userEmail" name="userEmail">
+                    	<input type="hidden" value="$userEmail"> 
+                  	</div>
+                    
+                    <div>
+                    	<label for="password">Password*</label>
+                    	<input type="password" id="userPassword" name="userPassword" placeholder="Create your password">
+                    	<input type="hidden" value="$userPassword"> 
+                  	</div>
+                  	<div>
+                    	<label for="password2">Confirm Password*</label>
+                    	<input type="password" id="verifyuserPassword" name="verifyuserPassword">
+                    	<input type="hidden" value="$verifyuserPassword"> 
+                  	</div>   	
                   <div>
                     <label for="userNhood">Neighborhood Location*</label>
                     <input type="hidden" value="$userNhood">
@@ -181,7 +199,7 @@
           	<div data-role="header">
             	<h3 align="center">USE TERMS</h3>
             	<a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a></div>
-<p>Copyright 2014 - Kheprw Institute Open Source Activism All Rights Reserved. The Neighbor2Neighbor App may be used and modified free of charge by anyone so long as this user agreement and copyright notice remains intact. By using this app you agree to indemnify the Kheprw Institute from any liability that might arise from its use or the use of the services, products and programs listed as resources. We do not endorse any provider nor quarantee the quality of their offerings. You also agree to abide by the following rules: no profanity, no vulgarity, no conducting any illegal actitivy, no obscenity, no nudity and no defamation of character. We reserve the right to suspend, deactivate or ban an account for but not limited to reasons such as those given in the aforementioned rules. Selling the code for this app without prior written consent is expressly forbidden. In all cases copyright and header must remain intact. The information provided by this app is made available by the Kheprw Institute as a service to the community.By checking below you agree to abide by the terms of this agreement.</p>
+<p>Copyright 2014 - Kheprw Institute Open Source Activism All Rights Reserved. The Neighbor2Neighbor App may be used and modified free of charge by anyone so long as this user agreement and copyright notice remains intact. By using this app you agree to indemnify the Kheprw Institute from any liability that might arise from its use or the use of the services, products and programs listed as resources. We do not endorse any provider nor quarantee the quality of their offerings. You also agree to abide by the following rules: no profanity, no vulgarity, no conducting any illegal actitivy, no obscenity, no nudity and no defamation of character. We reserve the right to suspend, deactivate or ban an account for but not limited to reasons such as those given in the aforementioned rules. Selling the code for this app without prior written consent is expressly forbidden. In all cases copyright and header must remain intact. The information provided by this app is made available by the Kheprw Institute as a service to the community. By checking below you agree to abide by the terms of this agreement.</p>
 			</div>
           </div>
          </div><!-- /page -->
