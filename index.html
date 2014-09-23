@@ -134,7 +134,7 @@
 	$(document).ready(function() {
 	$('#signIn').validate({
     rules: {
-        loginEmailAddr: {
+        email: {
             required: true,
 			minlength: 6, 
         },
@@ -173,7 +173,7 @@
             <div style="height:10px;"></div>
             <div>
             	<label for="loginEmailAddr" class="ui-hidden-accessible">Email Address*</label>
-                <input type="email" id="loginUsrname" name="loginEmailAddr" placeholder="Email Address*">
+                <input type="email" id="email" name="email" placeholder="Email Address*">
                 <input type="hidden" value="$loginEmailAddr">    	
             
     			<label for="loginUsrpasswrd" class="ui-hidden-accessible">Password*</label>

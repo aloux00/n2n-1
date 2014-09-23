@@ -4,21 +4,18 @@
 	<meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
-	<link rel="stylesheet" href="themes/Neighborly.min.css">
-    <link rel="stylesheet" href="N2N.css">
 	<?php
 	require('dbx.php');
 	require('createUserAcct.php');
 	?> 
-	<title>Register</title>
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+    <title>Register</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+	<link rel="stylesheet" href="themes/Neighborly.min.css">
+    <link rel="stylesheet" href="N2N.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>\
+	<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>					
+	<script src="jquery.validate.js"></script>
 	<script type="text/javascript" src="utils.js"></script>
-	<script type="application/javascript" src="js/jquery.min.js"></script>
-	<script type="application/javascript" src="js/index_user_scripts.js"></script>
-	<script type="application/javascript" src="popup/popup.min.js"></script>
-    <script src="jquery.validate.js"></script>
     <script type="text/javascript"></script>
     <!--[if lt IE 9]>
 <script src="html5shiv.js"></script>
@@ -39,11 +36,10 @@
 <body>
   	<div class="uwrap"><!-- uwrap -->
       <div id="register" data-role="page" data-theme="a"><!-- page -->
- 
 	<script type="text/javascript">
 	$(document).ready(function() {
 	$('#registerForm').validate({
-    rules: {
+	rules: {
         Name: {
             required: true
         },
@@ -54,8 +50,9 @@
             required: true,
 			minlength: 5
         },
-        userEmail: {
-            required: true
+        email: {
+            required: true,
+            email: true,
         },
 		userPassword: {
             required: true,
@@ -103,8 +100,8 @@
     }
 	}
 });
-});
-		</script>          
+});		</script>
+        <script type="application/javascript" src="popup/popup.min.js"></script>        
           <div data-role="header" style="overflow:hidden;" data-position="fixed">
             <a href="index.html" data-icon="home" class="ui-btn-left" style="background-color:#000000">Home</a>
             <h1>Register</h1>
@@ -113,7 +110,7 @@
          
            <div data-role="content" style="margin-left:20px; margin-right:20px;"><!-- upage-content -->
            <div>
-             <form action="Success.php" method="post" id="registerForm" data-theme="a" autocomplete="off">
+             <form action="Success.php" method="post" id="registerForm" data-theme="a" autocomplete="off" data-ajax="true">
                   	<div style="margin-top:20px;">
                     	<label for="Name">Name*</label>
                     	<input type="text" id="Name" name="Name">
@@ -140,8 +137,8 @@
                     	<input type="hidden" value="$userPhone"> 
                   	</div>
                     <div>
-                    	<label for="userEmail">Email Address*</label>
-                    	<input type="email" id="userEmail" value="" name="userEmail">
+                    	<label for="email">Email Address*</label>
+                    	<input type="email" id="email" name="email">
                     	<input type="hidden" value="$userEmail"> 
                   	</div>
                     <div>
@@ -174,7 +171,7 @@
                     
                     <div style="height:100%; text-align:justify;" >     
                         	<legend>Click button to agree*</legend>
-                        	<input type="checkbox" name="agree" id="agree" data-theme="a" class="required">
+                        	<input type="checkbox" name="agree" id="agree" data-theme="a">
     						<label for="agree">I agree</label>
                             <input type="hidden" value="$agree">
                     </div>
