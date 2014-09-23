@@ -52,20 +52,20 @@ require ('offeringDetail.php');
            	<div>
             	<h4>Create Offering Profile</h4>
             </div>
-           		<figure class="figure-align">
-                	<img src="images/placeholder_image1.png" height="50%" width="100%">
-                    <figcaption data-position="bottom"></figcaption>
+           		<form enctype="multipart/form-data" action="createProfile.php" method="post" id="addOffrng" data-theme="a">
+                <input type='hidden' name='action' value='createOffrngProfile'>
+                <figure class="figure-align style="width:100%; height: 30%">
+                	<img src="images/placeholder_imageOrvideo.png" width="50%" height="40%" alt="Image or Video" style="display:block; margin: 0 auto;"/>
                  </figure>
-                 
-              	<form action="offeringDetail.php" method="post" id="register" data-ajax="false" data-theme="a">
+              	
               		<div style="margin-top:20px;">
                     	<label for="file">Upload Image or Logo</label>
-						<input type="file" name="provdrImg" id="provdrImg" value="" data-theme="a">
-                        <input type="hidden" value="$provdrImg">
+						<input type="file" name="$offrngImg" id="$offrngImg" data-theme="a">
+                        <input type="hidden" value="$offrngImg">
                     </div>
                   	<div>
-                    	<label for="offeringName">Offering Name</label>
-                    	<input type="text" id="offeringName" name="offeringName" placeholder="Name" >
+                    	<label for="offrngName">Offering Name</label>
+                    	<input type="text" id="offrngName" name="offrngName" placeholder="Name" >
                     	<input type="hidden" value="$offrngName">
                   	</div>
 					<div>

@@ -19,5 +19,65 @@
 </head>
 
 <body>
+<?php
+if (isset($_REQUEST['action'])) { 
+    $action = $_REQUEST['action'];
+} else { 
+    $action = "";
+}
+
+if ($action == 'createProvdrProfile') {
+
+if (isset($_REQUEST['provdrLogo'])) { 
+    $provdrLogo = $_REQUEST['provdrLogo'];
+	$folder = “uploads/pvdrLogos/”;
+	if (is_uploaded_file($HTTP_POST_FILES['provdrLogo']['tmp_name']))  {   
+    if (move_uploaded_file($HTTP_POST_FILES['provdrLogo']['tmp_name'], $folder.$HTTP_POST_FILES['provdrLogo']['name'])) {
+         echo 'Logo uploaded.';
+       } else {
+         echo 'Logo was not uploaded.';
+	   } 
+}
+}
+
+if (isset($_REQUEST['provdrImgs'])) { 
+    $provdrImgs = $_REQUEST['provdrImgs'];
+$folder = “uploads/provdrImgs/”;
+if (is_uploaded_file($HTTP_POST_FILES['provdrImgs']['tmp_name']))  {   
+    if (move_uploaded_file($HTTP_POST_FILES['provdrImgs']['tmp_name'], $folder.$HTTP_POST_FILES['provdrImgs']['name'])) {
+         echo 'File uploaded.';
+       } else {
+         echo 'File was not uploaded.';
+	   } 
+}
+}
+
+
+// php code for writing data to database goes on this page. If successful view of provider profile page displayed. //
+ 
+header('Location: viewProfile.php'); 
+       
+}
+
+if ($action == 'createOffrngProfile') {
+
+if (isset($_REQUEST['offrngImg'])) { 
+    $provdrLogo = $_REQUEST['offrngImg'];
+	$folder = “uploads/offrngImgs/”;
+	if (is_uploaded_file($HTTP_POST_FILES['offrngImg']['tmp_name']))  {   
+    if (move_uploaded_file($HTTP_POST_FILES['offrngImg']['tmp_name'], $folder.$HTTP_POST_FILES['offrngImg']['name'])) {
+         echo 'Image uploaded.';
+       } else {
+         echo 'Image was not uploaded.';
+	   } 
+}
+}
+
+// php code for writing data to database goes on this page. If successful view of offering profile page displayed. //
+ 
+header('Location: viewOffrng.php'); 
+
+?>
+
 </body>
 </html>

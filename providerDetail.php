@@ -52,37 +52,31 @@
                     </figure>
                   </div>
                   <div>
-                  <p style="margin-left: 15px;">The Kheprw Institute</p>
+                  <p style="margin-left: 30px;">The Kheprw Institute</p>
                    
                    
-                   <div style="margin-left:20px; margin-right: 20px;">
+                   <div style="margin-left:30px; margin-right: 20px;">
                       <p> <a href="http://www.kieocenter.org">www.kieocenter.org</a></p>
                       <a href="#popupContact" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-mini ui-btn-a" data-transition="pop" data-theme="a">Contact Us</a>
                     </div>
-                  
-                  	<div style="height:10px;"></div>
 
-                  	<div style="margin-left:30px;">
+                  	<div style="margin-left:30px; margin-top:10px;">
                       <p> 3549 Boulevard Place<br>
                           P.O. Box 88856<br>
                           Indianapolis, IN 46208<br>
                           info@kheprw.org</p>
                     </div>
                     
-                    <div style="margin-left:30px; margin-right:30px;">
-                   		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.4096585690654!2d-86.16358089999999!3d39.82023199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b514675002ba7%3A0x767a2b5646e17170!2s3549+Boulevard+Pl!5e0!3m2!1sen!2sus!4v1400644897818" height="300" width="100%" frameborder="0" style="border:0" align="left">
-                        </iframe>
+                    <div class="widget uib_w_141 d-margins" data-uib="media/iframe" data-ver="0" style="margin-left: 30px; margin-right: 30px; margin-bottom:30px;">
+                        	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.4096585690654!2d-86.16358089999999!3d39.82023199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b514675002ba7%3A0x767a2b5646e17170!2s3549+Boulevard+Pl!5e0!3m2!1sen!2sus!4v1400644897818" height="300" width="100%" frameborder="0" style="border:0" align="left" marginheight="30">
+                        	</iframe>
                   	</div>
-                                       
-            		<div style="margin-left:20px; margin-right:20px; margin-top: 50px;">
-                    	<div style="height=50px;"data-ver="0">
-                      		<p>What We Offer</p>
-            	  		</div>
-                 	</div>
-               
-             
-                  <div data-role="collapsible-set" class="no_wrap widget uib_w_74 d-margins" data-uib="jquery_mobile/accordion" data-ver="0" data-collapsed-icon="plus" data-expanded-icon="minus" data-theme="a" style="margin-bottom:20px;">
-                    <div data-role="collapsible" class="no_wrap widget uib_w_75" data-uib="jquery_mobile/collapsible" data-ver="0" data-mini="true" data-collapsed-icon="eye">
+                    <div style="height:20px;"></div>
+                    
+            	  <div style="margin-left:30px; margin-right:30px; margin-top:auto">
+                  <div data-role="collapsible-set">
+                  <legend style="margin-top:30px;">What We Offer</legend>
+                    <div data-role="collapsible" data-mini="true" data-collapsed-icon="eye" data-content-theme="a"d>
                       <h4>KI NuMedia</h4>
                       <div class="col uib_col_34 single-col" data-uib="layout/col" data-ver="0">
                         <div class="widget-container content-area vertical-col">
@@ -111,7 +105,7 @@
                             
                       </div>
                     </div>
-                    <div data-role="collapsible" class="no_wrap widget uib_w_76" data-uib="jquery_mobile/collapsible" data-ver="0" data-mini="true" data-collapsed-icon="eye">
+                    <div data-role="collapsible" data-mini="true" data-collapsed-icon="eye">
                       <h4>EY Rainbarrels</h4>
                       <div class="col uib_col_34 single-col" data-uib="layout/col" data-ver="0">
                         <div class="widget-container content-area vertical-col">
@@ -137,7 +131,7 @@
                             
                       </div>
                     </div>
-                    <div data-role="collapsible" class="no_wrap widget uib_w_77" data-uib="jquery_mobile/collapsible" data-ver="0" data-mini="true" data-collapsed-icon="eye">
+                    <div data-role="collapsible" data-mini="true" data-collapsed-icon="eye">
                       <h4>EcoFashion Bags</h4>
                       <div class="col uib_col_34 single-col" data-uib="layout/col" data-ver="0">
                         <div class="widget-container content-area vertical-col">
@@ -162,6 +156,7 @@
                             </div>
                       	</div>
                         <div style="height:2opx;"></div>
+                </div>
                 </div>
                 
               

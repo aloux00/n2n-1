@@ -85,6 +85,7 @@
         },
 		provdrPhone: {
             required: "Please enter provider number."
+			maxlength: 10
         },
 		provdrNhood: {
             required: "Please choose neighborhood <br>of product and service offerings."
@@ -118,8 +119,8 @@
            	<div>
             	<h4>Create Provider Profile</h4>
            </div>
-             <form enctype="multipart/form-data" action="createProfile.php" method="post" id="createProvdrForm" data-theme="a" data-ajax="false">
-              		 
+             <form enctype="multipart/form-data" action="createProfile.php" method="post" id="createProvdrForm" data-theme="a">
+              	<input type='hidden' name='action' value='createProvdrProfile'>	 
            		<figure class="figure-align style="width:100%; height: 30%">
                 	<img src="images/placeholder_logo_banner.png" width="100%" height="30%" alt="LogoOrBanner" style="display:block; margin: 0 auto;"/>
                  </figure>
@@ -137,10 +138,10 @@
                  </figure>
                     </div>
                     <div style="margin-top:20px;">
-                    	<label for="file">Upload Image, Icon or Video</label>
+                    	<label for="file">Upload Image or Icon</label>
 						<input type="hidden" name="MMAX_FILE_SIZE" value="5000000">
-                        <input type="file" name="provdrMedia" id="provdrMedia" data-theme="a" onChange="getFileName(this.files)">
-                        <input type="hidden" value="$provdrMedia">
+                        <input type="file" name="provdrImgs" id="provdrImgs" data-theme="a" onChange="getFileName(this.files)">
+                        <input type="hidden" value="$provdrImgs">
                     </div>
                   	<div style="margin-top:20px;">
                     	<label for="provdrName">Company or Organization Name*</label>

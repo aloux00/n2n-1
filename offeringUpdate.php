@@ -40,7 +40,7 @@
           
           <div data-role="header" style="overflow:hidden;" data-position="fixed">
             <a href="home.html" data-icon="home" class="ui-btn-left" style="background-color:#000000">Home</a>
-            <h1>Update Offering Details</h1>
+            <h1>Update Offering</h1>
             <a href="#" data-icon="carat-l" class="ui-btn-right" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
          </div><!--/header-->
          
