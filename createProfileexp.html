@@ -1,0 +1,285 @@
+<!DOCTYPE  doctype-->
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.4.min.css" />
+	<link rel="stylesheet" href="themes/Neighborly.min.css">
+    <link rel="stylesheet" href="N2N.css">        
+	<?php
+	require('dbx.php');
+	require('createProfile.php');
+	?> 
+	<title>Create Profile</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+	<script type="text/javascript" src="utils.js"></script>
+	<script type="application/javascript" src="js/jquery.min.js"></script>
+	<script type="application/javascript" src="js/index_user_scripts.js"></script>
+    <script src="jquery.validate.js"></script>
+    <script type="text/javascript"></script>
+    <!--[if lt IE 9]>
+	<script src="html5shiv.js"></script>
+	<![endif]-->
+	<!-- this is Google Analytics Script -->
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24864839-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+	</script>         
+</head>
+  
+<body>
+  	<div class="uwrap"><!-- uwrap -->
+      <div data-role="page" id="page" data-theme="a"><!-- page -->
+     		<script type="text/javascript">
+	$(document).ready(function() {
+	$('#createProvdrForm').validate({
+    rules: {
+        provdrName: {
+            required: true
+        },
+        provdrAddress1: {
+            required: true
+        },
+		provdrZipcode: {
+            required: true,
+			minlength: 5
+        },
+        provdrEmail: {
+            required: true
+        },
+		provdrPhone: {
+            required: true
+        },
+		provdrNhood: {
+			required: true
+    	},
+		provdrcontactMethod: {
+			required: true
+    	},
+		provdracctType: {
+			required: true
+    	}
+	},
+    messages: {
+        provdrName: {
+            required: "Please enter your provider name."
+        },
+        provdrAddress1: {
+            required: "Please enter provider address."
+        },
+		provdrZipcode: {
+            required: "Please enter zip code."
+        },
+		
+        provdrEmail: {
+            required: "Please enter provider email."
+        },
+		provdrPhone: {
+            required: "Please enter provider number."
+        },
+		provdrNhood: {
+            required: "Please choose neighborhood <br>of product and service offerings."
+        },
+		provdrcontactMethod: {
+            required: "Please choose one."
+        },
+		provdracctType: {
+            required: "Please choose one."
+        },
+    errorPlacement: function (error, element) {
+        error.appendTo(element.parent().prev());
+    }, 
+    submitHandler: function (form) {
+        $(':mobile-pagecontainer').pagecontainer('change', '#success', {
+            reload: false
+        });
+        return false;
+    }
+	}
+});
+});
+		</script>          
+          <div data-role="header" style="overflow:hidden;" data-position="fixed">
+            <a href="index.html" data-icon="home" class="ui-btn-left" style="background-color:#000000">Home</a>
+            <h1>Create Profile</h1>
+            <a href="#" data-icon="carat-l" class="ui-btn-right" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
+         </div><!--/header-->
+         
+           <div data-role="content" style="margin-left:20px; margin-right:20px;"><!-- upage-content -->
+           	<div>
+            	<h4>Create Provider Profile</h4>
+           </div>
+             <form action="createProfile.php" method="post" id="createProvdrForm" data-theme="a" data-ajax="false">
+                 <div id="preview" style="width:75%;">
+				 </div>
+            	 <div style="width:60%; font-size:12px;">
+					<ul id="info" data-role="listview" data-inset="true">
+					</ul>
+            	 </div>
+                 <div style="margin-top:20px;">
+						<button id="chooseFile">Choose Logo</button>
+                  </div>      
+				 <div class="hiddenfile">	
+                        <input type="file"  data-clear-btn="false" name="image" accept="image/*" capture>
+                        <input type="hidden" name="LMAX_FILE_SIZE" value="5000000">
+                        <input type="hidden" value="$provdrLogo">
+                 </div>
+                    <div style="margin-top:20px;">
+                    <figure class="figure-align">
+                	<img src="images/placeholder_imageOrvideo.png" width="80%" height="50%" alt="Image or Video" style="display:block; margin: 0 auto;"/>
+                    <figcaption data-position="bottom"></figcaption>
+                 </figure>
+                    </div>
+                    <div style="margin-top:20px;">
+                    	<label for="file">Upload Image, Icon or Video</label>
+						<input type="file" name="provdrMedia" id="provdrMedia" data-theme="a" onChange="getFileName(this.files)">
+                        <input type="hidden" name="MMAX_FILE_SIZE" value="5000000">
+                        <input type="hidden" value="$provdrMedia">
+                    </div>
+                  	<div style="margin-top:20px;">
+                    	<label for="provdrName">Company or Organization Name*</label>
+                    	<input type="text" id="provdrName" name="provdrName">
+                    	<input type="hidden" value="$provdrName">
+                  	</div>
+                  	<div>
+                    	<label for="provdrAddress1">Address 1*</label>
+                    	<input type="text" id="provdrAddress1" name="provdrAddress1" >
+                    	<input type="hidden" value="$provdrAddress1"> 
+                  	</div>
+                  	<div>
+                    	<label for="provdraddress2">Address 2</label>
+                    	<input type="text" id="provdraddress2" name="provdraddress2" >
+                    	<input type="hidden" value="$provdraddress2"> 
+                  	</div>
+                  	<div>
+                    	<?php $providrCity='Indianapolis' ?> 
+                        <label for="provdrCity">City</label>
+                    	<input type="text" id="provdrCity" name="provdrCity" value="Indianapolis"> 
+                    	 <input type="hidden" value="$provdrCity"> 
+                  	</div
+                  	><div>
+                    	<label for="provdrZipcode">Zip Code*</label>
+                    	<input type="text" id="provdrZipcode" name="provdrZipcode" >
+                    	<input type="hidden" value="$provdrZipcode"> 
+                  	</div>
+                  	<div>
+                    	<label for="provdrUrl">Website Address</label>
+                    	<input type="url" id="provdrUrl" name="provdrUrl" value="http://www.">
+                    	<input type="hidden" value="$provdrUrl"> 
+                  	</div>
+                    <div>
+                    	<label for="provdrEmail">Email Address*</label>
+                    	<input type="email" id="provdrEmail" name="provdrEmail" >
+                    	<input type="hidden" value="$provdrEmail"> 
+                  	</div>	
+                  	<div>
+                    	<label for="provdrPhone">Phone #*</label>
+                    	<input type="tel" id="provdrPhone" name="provdrPhone" >
+                    	<input type="hidden" value="$provdrPhone"> 
+                  	</div>
+                    <div>
+                    <label for="provdrNhood">Neighborhood Location*</label>
+                    <input type="hidden" value="$provdrNhood">
+                      <select name="provdrNhood" id="provdrNhood"> 
+                        <option value="">Select....</option>
+                        <option value="chill">Crown Hill</option>
+                        <option  value="hvacin">Highland Vacinity</option>
+                        <option value="hmpark">Historic Meridian Park</option>
+                        <option value="mfcreek">Mapleton-Fall Creek</option>
+                        <option value="mhland">Meridian-Highland</option>
+                        <option value="wmccord">Watson-McCord</option>
+                      </select>
+                    </div>
+                  <div>
+                    <label for="provdrcontactMethod">Preferred Method of Contact*</label>
+                    <input type="hidden" value="$provdrcontactMethod">
+                      <select name="provdrcontactMethod" id="provdrcontactMethod"> 
+                        <option value="">Select...</option>
+                        <option value="e">Email</option>
+                        <option value="p">Phone</option>
+                      </select>
+                  </div>
+                  <div>
+                    <label for="provdracctType">Type of Account*</label>
+                    <input type="hidden" value="$provdracctType">
+                      <select name="provdracctType" id="provdracctType"> 
+                        <option value="">Select...</option>
+                        <option value="b">Business Provider</option>
+                        <option value="i">Individual Provider</option>
+                        <option value="o">Nonprofit Provider</option>
+                      </select>
+                  </div>
+            <div align="center"><input type="submit" data-mini="true" value="Save Profile" data-inline="true" data-role="button"></div>
+            
+        </form>
+        
+      </div> <!-- /upage content -->
+
+          <div data-role="footer" style="overflow:hidden;">
+			<div data-role="navbar">
+        		<ul>
+            		<li><a href="" style="background-color:#000000">FAQ</a></li>
+            		<li><a href="ReportProblem.html" style="background-color:#000000">Report A Problem</a></li>
+        		</ul>
+    		</div><!-- /navbar -->
+		  </div><!-- /footer -->
+         </div><!-- /page -->
+        </div><!-- /uwrap --> 
+        <script>
+    $('#page').on('pageinit', function(){
+		$("#chooseFile").click(function(e){
+			e.preventDefault();
+			$("input[type=file]").trigger("click");
+		});
+		$("input[type=file]").change(function(){
+			var file = $("input[type=file]")[0].files[0];            
+			$("#preview").empty();
+			displayAsImage3(file, "preview");
+			$info = $("#info");
+			$info.empty();
+			if (file && file.name) {
+				$info.append("<li>name: <span>" + file.name + "</span></li>");
+			}
+			if (file && file.type) {
+				$info.append("<li>type: <span>" + file.type + "</span></li>");
+			}
+			if (file && file.size) {
+				$info.append("<li>size: <span>" + file.size + " bytes</span></li>");
+			}
+			if (file && file.date_modified) {
+				$info.append("<li>date_modified: <span>" + file.date_modified + "</span></li>");
+			}
+			$info.listview("refresh");
+		});
+    });
+
+    function displayAsImage3(file, containerid) {
+		if (typeof FileReader !== "undefined") {
+			var container = document.getElementById(containerid),
+			    img = document.createElement("img"),
+			    reader;
+			container.appendChild(img);
+			reader = new FileReader();
+			reader.onload = (function (theImg) {
+				return function (evt) {
+					theImg.src = evt.target.result;
+				};
+			}(img));
+			reader.readAsDataURL(file);
+		}
+	}
+	
+    </script>         
+    </body>
+</html>
+
+      

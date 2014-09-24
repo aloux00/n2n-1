@@ -1,6 +1,18 @@
+@charset "utf-8";
 /* CSS Document */
-
-.bkgcolor {
-	background-color: #000000;
+.error {
+    color:red;
 }
 
+#preview {
+				width: 80%; max-width: 300px;
+			}
+			#preview img {
+				width: 100%;
+			}
+			.hiddenfile {
+			 width: 0px;
+			 height: 0px;
+			 overflow: hidden;
+}
+		

@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_GET['TagId']) ) { 
 $TagId = (int) $_GET['TagId']; 
 if (isset($_POST['submitted'])) { 

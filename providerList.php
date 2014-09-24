@@ -1,13 +1,23 @@
+<?php 
+
+require './database/provider/functions.php';
+
+if ( isset($_GET['keyword']) ) { 
+	$ds = getProvidersByKeyword($_GET['keyword']) ;
+} else if ( isset($_GET['index'])) { 
+	$ds = getProvidersByIndex($_GET['index']) ;
+} else if ( isset($_GET['category'])) { 
+	$ds = getProvidersByCategory($_GET['category']) ;
+}
+
+?>
 <!DOCTYPE html PUBLIC>
 <html>
 <head>
 <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">     
-	<?php
-	require('dbx.php');
-	
-	?>
+
     <title>Provider Index List</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 	<link rel="stylesheet" href="themes/Neighborly.min.css">      
@@ -38,7 +48,7 @@
 
                   <div class="widget uib_w_14 ui-content no_wrap outset-margin d-margins" data-rel="popup">
                     <ul data-role="listview" data-filter="true">
-                      <li class="widget uib_w_15 img" data-theme="a">
+<!--                      <li class="widget uib_w_15 img" data-theme="a">
                         <a href="#jqm-popup-1" data-rel="popup">
                           <img src="images/ki.png">
                           <h2>Kheprw Insititue</h2>
@@ -59,6 +69,142 @@
                         <p>We Scare Because We Care</p>
                         </a>
                       </li>
+-->                      
+
+<?php 
+	if ($ds) {
+		/* echo mysql_num_rows($ds); */
+		while($row = mysql_fetch_array($ds)){ 
+			foreach($row AS $key => $value) { $row[$key] = stripslashes($value); }
+				$out .= '<li class="widget uib_w_17 img" data-uib="jquery_mobile/listitem" data-ver="0">';
+				$out .= '  <a href="#jqm-popup-' . $row['ProviderId'] . '" data-rel="popup">';
+				$out .= '    <img src="images/' . $row['ProfileImage'] . '">';
+				$out .= '    <h2>' . $row['Name'] . '</h2>';
+				$out .= '    <p>' . $row['Description'] . '</p>';
+				$out .= '  </a>';
+				$out .= '</li>';
+
+				$popup .= '<div data-role="popup" class="outer-element uib_w_22 padded-col uib-jqm-popup title" ';
+				$popup .= 'id="jqm-popup-' . $row['ProviderId'] . '">';
+				$popup .= '<div data-role="header" class="ui-corner-top">';
+                $popup .= '<h1>' . $row['Name'] . '</h1></div>';
+				$popup .= '<a href="#" data-rel="back" data-role="button" data-icon="delete" ';
+				$popup .= 'data-iconpos="notext" class="ui-btn-right">Close</a>';
+
+     /*     <div class="col uib_col_3 single-col" data-uib="layout/col">
+			  <!-- if provider has a video -->
+              <div class="embed-video widget uib_w_54 d-margins" data-uib="media/youtube">
+                <iframe width="100%" height="50%" src="//www.youtube.com/embed/Nc1qFGLn82E" frameborder="0" allowfullscreen></iframe>
+               </div>
+	  	      <!--  Container -->
+			  <div class="widget-container content-area vertical-col">
+
+		      <!--  Offering Row -->
+                <div class="grid grid-pad urow uib_row_9 row-height-9" data-uib="layout/row">
+                  <div class="col uib_col_5 col-0" data-uib="layout/col" data-ver="0">
+                    <div class="widget-container content-area vertical-col">
+				      <!--  Offering Accordion -->
+                      <div data-role="collapsible-set" class="no_wrap widget uib_w_26 d-margins" data-uib="jquery_mobile/accordion" data-ver="0" data-mini="true"> 
+					    <!--  Offering 1 -->
+                        <div data-role="collapsible" class="no_wrap widget uib_w_29" data-uib="jquery_mobile/collapsible" data-ver="0" data-mini="true">
+                          <h4>EcoFashion Bags</h4>
+                          <div class="col uib_col_8 single-col" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                              <div class="widget uib_w_34 d-margins" data-uib="media/text" data-ver="0">
+                                <div class="widget-container left-receptacle"></div>
+                                <div class="widget-container right-receptacle">
+                                  <div class="widget uib_w_35 scale-image d-margins" data-uib="media/img" data-ver="0">
+                                    <figure class="figure-align">
+                                      <img src="">
+                                    </figure>
+                                  </div>
+                                </div>
+                                <div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                              </div><span class="uib_shim"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+					    <!--  Offering 2 -->
+                        <div data-role="collapsible" class="no_wrap widget uib_w_27" data-uib="jquery_mobile/collapsible" data-ver="0" data-mini="true">
+                          <h4>Express Yourself Rain Barrels</h4>
+                          <div class="col uib_col_6 single-col" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                              <div class="widget uib_w_31 scale-image d-margins" data-uib="media/img" data-ver="0">
+                                <figure class="figure-align">
+                                  <img src="">
+                                </figure>
+                              </div>
+                              <div class="widget uib_w_30 d-margins" data-uib="media/text" data-ver="0">
+                                <div class="widget-container left-receptacle"></div>
+                                <div class="widget-container right-receptacle"></div>
+                                <div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                              </div><span class="uib_shim"></span>
+                            </div>
+                          </div>
+                        </div>
+					    <!--  Offering 3 -->
+                        <div data-role="collapsible" class="no_wrap widget uib_w_28" data-uib="jquery_mobile/collapsible" data-ver="0" data-mini="true">
+                           <h4>KI NuMedia</h4>
+                      <div class="col uib_col_34 single-col" data-uib="layout/col" data-ver="0">
+                        <div class="widget-container content-area vertical-col">
+
+                          <div class="widget uib_w_79 d-margins link" data-uib="media/text" data-ver="0">
+                            <div class="widget-container left-receptacle"></div>
+                            <div class="widget uib_w_78 scale-image d-margins" data-uib="media/img" data-ver="0">
+                            <figure class="figure-align">
+                              <img src="images/NuMedia Logo.png"  width="100%" alt="Logo" longdesc="images/NuMedia Logo.png">
+<figcaption data-position="bottom"></figcaption>
+                            </figure>
+                          </div>
+
+                          <span class="uib_shim"></span>
+                        </div>
+                        <div>
+                              <p>We offer graphic design, web/mobile app development, social media management and branding services.
+                        </div>
+                          </div>
+                            <div class="widget-container right-receptacle">
+                              <a href="offeringDetail.php" class="widget uib_w_81 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true">More Info</a>
+                            </div>
+                        </div>
+                        </div>
+                        
+                      <span class="uib_shim"></span>
+                    </div>
+                  </div>
+
+                  <span class="uib_shim"></span>
+                </div>
+
+		      <!--  Contact Row -->
+                <div class="grid grid-pad urow uib_row_11 row-height-11" data-uib="layout/row" data-ver="0">
+                  <div class="col uib_col_13 col-0_12-12" data-uib="layout/col" data-ver="0">
+                    <div class="widget-container content-area vertical-col">
+                      <span class="uib_shim"></span>
+                    </div>
+                  </div>
+		          <!--  Provider Detail Link -->
+                  <a href="providerDetail.php?name=$name" class="widget uib_w_53 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" data-transition="fade" data-icon="user">Visit Provider Page</a>
+                  <span class="uib_shim"></span>
+                </div><span class="uib_shim"></span>
+              </div>
+            </div>
+          </div>
+				*/
+				
+		} 
+	} else {
+		$out = 'Error.';
+	}
+
+	echo $out;
+?>
                       <span class="uib_shim"></span>
                     </ul>
                   </div>

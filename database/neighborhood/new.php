@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_POST['submitted'])) { 
 foreach($_POST AS $key => $value) { $_POST[$key] = mysql_real_escape_string($value); } 
 $sql = "INSERT INTO `Neighborhood` ( `Name` ,  `Description`  ) VALUES(  '{$_POST['Name']}' ,  '{$_POST['Description']}'  ) "; 

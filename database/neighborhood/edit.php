@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_GET['NeighborhoodId']) ) { 
 $NeighborhoodId = (int) $_GET['NeighborhoodId']; 
 if (isset($_POST['submitted'])) { 

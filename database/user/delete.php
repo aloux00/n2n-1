@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 $UserId = (int) $_GET['UserId']; 
 mysql_query("DELETE FROM `User` WHERE `UserId` = '$UserId' ") ; 
 echo (mysql_affected_rows()) ? "Row deleted.<br /> " : "Nothing deleted.<br /> "; 

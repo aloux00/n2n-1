@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 $TagId = (int) $_GET['TagId']; 
 mysql_query("DELETE FROM `Tag` WHERE `TagId` = '$TagId' ") ; 
 echo (mysql_affected_rows()) ? "Row deleted.<br /> " : "Nothing deleted.<br /> "; 

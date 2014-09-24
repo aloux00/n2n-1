@@ -4,23 +4,18 @@
 	<meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
 	<link rel="stylesheet" href="themes/Neighborly.min.css">        
     <title>Update Offering</title>
-	<script src="intelxdk.js"></script>
-    <script src="cordova.js"></script>
-    <script type="application/javascript" src="js/jquery.min.js"></script>
-    <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
-    <script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
-    <script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
-    <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
-    <script type="application/javascript" src="sidebar/js/swipe.js"></script>
-    <script type="application/javascript" src="popup/popup.min.js"></script>
-    <script type="application/javascript" src="js/index_user_scripts.js"></script>
-    <script type="application/javascript" src="justgage/js/raphael.min.js"></script>
-    <script type="application/javascript" src="justgage/js/justgage.min.js"></script>
-    <script type="application/javascript" src="justgage/gauges.js"></script>
-    <script type="application/javascript" src="js/jqm_subpage.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+	<script type="text/javascript" src="utils.js"></script>
+	<script type="application/javascript" src="js/jquery.min.js"></script>
+	<script type="application/javascript" src="js/index_user_scripts.js"></script>
+	<script type="application/javascript" src="popup/popup.min.js"></script>
+    <script type="text/javascript"></script>
+    <script src="jquery.validate.js"></script>
+    <script type="text/javascript"></script>
     <!--[if lt IE 9]>
 <script src="html5shiv.js"></script>
 <![endif]-->     
@@ -45,7 +40,7 @@
           
           <div data-role="header" style="overflow:hidden;" data-position="fixed">
             <a href="home.html" data-icon="home" class="ui-btn-left" style="background-color:#000000">Home</a>
-            <h1>Update Offering Details</h1>
+            <h1>Update Offering</h1>
             <a href="#" data-icon="carat-l" class="ui-btn-right" style="background-color:#000000;" data-transition="fade" data-rel="back">Back</a>
          </div><!--/header-->
          

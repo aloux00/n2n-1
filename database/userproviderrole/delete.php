@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 $UserId = (int) $_GET['UserId']; 
 $ProviderId = (int) $_GET['ProviderId']; 
 $RoleId = (int) $_GET['RoleId']; 

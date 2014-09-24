@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_GET['CategoryId']) ) { 
 $CategoryId = (int) $_GET['CategoryId']; 
 if (isset($_POST['submitted'])) { 

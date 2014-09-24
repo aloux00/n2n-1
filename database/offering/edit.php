@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_GET['OfferingId']) ) { 
 $OfferingId = (int) $_GET['OfferingId']; 
 if (isset($_POST['submitted'])) { 

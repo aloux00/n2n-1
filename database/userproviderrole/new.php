@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_POST['submitted'])) { 
 foreach($_POST AS $key => $value) { $_POST[$key] = mysql_real_escape_string($value); } 
 $sql = "INSERT INTO `UserProviderRole` ( `RoleId` ,  `ProviderId` ,  `UserId`  ) VALUES(  {$_POST['RoleId']} ,  {$_POST['ProviderId']} ,  {$_POST['UserId']}  ) "; 

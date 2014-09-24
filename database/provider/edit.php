@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_GET['ProviderId']) ) { 
 $ProviderId = (int) $_GET['ProviderId']; 
 if (isset($_POST['submitted'])) { 

@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 $NeighborhoodId = (int) $_GET['NeighborhoodId']; 
 mysql_query("DELETE FROM `Neighborhood` WHERE `NeighborhoodId` = '$NeighborhoodId' ") ; 
 echo (mysql_affected_rows()) ? "Row deleted.<br /> " : "Nothing deleted.<br /> "; 

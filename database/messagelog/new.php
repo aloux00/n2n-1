@@ -1,5 +1,5 @@
 <? 
-include('config.php'); 
+include('../config.php'); 
 if (isset($_POST['submitted'])) { 
 foreach($_POST AS $key => $value) { $_POST[$key] = mysql_real_escape_string($value); } 
 $sql = "INSERT INTO `MessageLog` ( `ProviderId` ,  `FromEmail` ,  `FromName` ,  `FromPhone` ,  `PreferredMethod` ,  `Subject` ,  `Message`  ) VALUES(  '{$_POST['ProviderId']}' ,  '{$_POST['FromEmail']}' ,  '{$_POST['FromName']}' ,  '{$_POST['FromPhone']}' ,  '{$_POST['PreferredMethod']}' ,  '{$_POST['Subject']}' ,  '{$_POST['Message']}'  ) "; 
