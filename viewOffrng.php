@@ -107,17 +107,17 @@
         </div>
         <!-- /upage-outer -->
 
-        
+        <!--is this supposed to be OfferingName or ContactName-->
         <div data-role="popup" id="popupInquiry" class="ui-corner-all">
 			<form action="contact.php" id="inquiryForm" method="post" style="background-color:#666666; color:#ffffff">
         		<div style="padding:10px 20px;">
             		<h3 align="center">Inquiry Form</h3>
             		<a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
             		<label for="name">Name:</label>
-            		<input type="text" name="user" id="name" data-clear-btn="true" />
-            		<input type="hidden" value="$name"/>
-            		<label for="email" >Email Address:</label>
-            		<input type="email" name="email" id="email" data-clear-btn="true" />
+            		<input type="text" name="UserName" id="UserName" data-clear-btn="true" />
+            		<input type="hidden" value="$UserName"/>
+            		<label for="ContactEmail" >Email Address:</label>
+            		<input type="email" name="email" id="ContactEmail" data-clear-btn="true" />
             		<input type="hidden" value="$email"/>
             		<label for="textarea">Message:</label>
 					<textarea cols="40" rows="8" name="message" value="$message"></textarea>

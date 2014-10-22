@@ -64,12 +64,12 @@
                     	<input type="text" id="offeringName" name="offeringName" value="$offrngName">
                   	</div>
 					<div>
-                    	<label for="offrngDesc">Description</label>
-    					<textarea name="offrngDesc" id="offrngDesc" placeholder="$offrngDesc" value="$offrngDesc"></textarea>
+                    	<label for="Description">Description</label>
+    					<textarea name="Description" id="Description" placeholder="$Description" value="$offrngDesc"></textarea>
                     </div>
                     <div>
-                    	<label for="offrngDesc">Fee - Product/Service Cost or Free</label>
-    					<textarea name="fee" id="fee" value="$fee" placeholder="$fee" ></textarea>
+                    	<label for="Fee">Fee - Product/Service Cost or Free</label>
+    					<textarea name="Fee" id="Fee" value="$Fee" placeholder="$Fee" ></textarea>
                     </div>		
 					<div> 
                     	<fieldset data-role="controlgroup">
@@ -81,8 +81,8 @@
     					</fieldset>
 					</div>	
                      <div>
-                    	<label for="offrngURL">Web Address <br/>(if different from main website)</label>
-    					<input type="text" id="offrngURL" name="offrngURL" value="$offrngURL">
+                    	<label for="ContactUrl">Web Address <br/>(if different from main website)</label>
+    					<input type="text" id="ContactUrl" name="ContactUrl" value="$ContactUrl">
                     </div>   
                         
 					<div style="margin-top:10px;">
