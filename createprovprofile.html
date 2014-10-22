@@ -46,56 +46,57 @@
 	$(document).ready(function() {
 	$('#createProvdrForm').validate({
     rules: {
-        provdrName: {
+        Name: {
             required: true
         },
-        provdrAddress1: {
+        Street1: {
             required: true
         },
-		provdrZipcode: {
+		Zip: {
             required: true,
 			minlength: 5
         },
-        provdrEmail: {
+        Email: {
             required: true
         },
-		provdrPhone: {
-            required: true
+		Phone: {
+            required: true,
+			minlength: 10
         },
-		provdrNhood: {
+		NeighborhoodID: {
 			required: true
     	},
-		provdrcontactMethod: {
+		Contact: {
 			required: true
     	},
-		provdracctType: {
+		ProviderType: {
 			required: true
     	}
 	},
     messages: {
-        provdrName: {
+        Name: {
             required: "Please enter your provider name."
         },
-        provdrAddress1: {
+        Street1: {
             required: "Please enter provider address."
         },
-		provdrZipcode: {
+		Zip: {
             required: "Please enter zip code."
         },
 		
-        provdrEmail: {
+        Email: {
             required: "Please enter provider email."
         },
-		provdrPhone: {
+		Phone: {
             required: "Please enter provider number."
         },
-		provdrNhood: {
+		NeighborhoodID: {
             required: "Please choose neighborhood <br>of product and service offerings."
         },
-		provdrcontactMethod: {
+		Contact: {
             required: "Please choose one."
         },
-		provdracctType: {
+		ProviderType: {
             required: "Please choose one."
         },
     errorPlacement: function (error, element) {
@@ -121,71 +122,72 @@
            	<div>
             	<h4>Create Provider Profile</h4>
            </div>
-             <form action="createProfile.php" method="post" id="createProvdrForm" data-theme="a">
-              		 
+             <form enctype="multipart/form-data" action="createProfile.php" method="post" data-theme="a" data-ajax="false">
+              	<input type='hidden' name='action' value='createProvdrProfile'>	 
            		<figure class="figure-align">
-                	<img src="images/placeholder_image1.png" height="20%" width="100%">
+                	<img src="images/placeholder_image1.png" height="10%" width="100%">
                     <figcaption data-position="bottom"></figcaption>
                  </figure>
                     <div style="margin-top:20px;">
                     	<label for="file">Upload Logo</label>
-						<input type="file" name="provdrLogo" id="provdrLogo" value="" data-theme="a">
+                        <input type="file" name="ProfileLogo" data-theme="a">
+                        <input type="hidden" value="$ProfileLogo">
                     </div>
                     <div style="margin-top:20px;">
                     <figure class="figure-align">
-                	<img src="images/placeholder_image1.png" height="20%" width="100%">
-                    <figcaption data-position="bottom"></figcaption>
+                	<img src="images/placeholder_image1.png" height="15%" width="100%">
+<figcaption data-position="bottom"></figcaption>
                  </figure>
                     </div>
                     <div style="margin-top:20px;">
-                    	<label for="file">Upload Image, Icon or Video</label>
-						<input type="file" name="provdrImg" id="provdrImg" value="" data-theme="a">
-                        <input type="hidden" value="$provdrImg">
+                    	<label for="file">Upload Image or Icon</label>
+						<input type="file" name="ProfileImage" data-theme="a">
+                        <input type="hidden" value="$ProfileImage">
                     </div>
                   	<div style="margin-top:20px;">
-                    	<label for="provdrName">Company or Organization Name*</label>
-                    	<input type="text" id="provdrName" name="provdrName">
-                    	<input type="hidden" value="$provdrName">
+                    	<label for="Name">Company or Organization Name*</label>
+                    	<input type="text" id="Name" name="Name">
+                    	<input type="hidden" value="$Name">
                   	</div>
                   	<div>
-                    	<label for="provdrAddress1">Address 1*</label>
-                    	<input type="text" id="provdrAddress1" name="provdrAddress1" >
-                    	<input type="hidden" value="$provdrAddress1"> 
+                    	<label for="Street1">Address 1*</label>
+                    	<input type="text" id="Street1" name="Street1" >
+                    	<input type="hidden" value="$Street1"> 
                   	</div>
                   	<div>
-                    	<label for="provdraddress2">Address 2</label>
-                    	<input type="text" id="provdraddress2" name="provdraddress2" >
-                    	<input type="hidden" value="$provdraddress2"> 
+                    	<label for="Street2">Address 2</label>
+                    	<input type="text" id="Street2" name="Street2" >
+                    	<input type="hidden" value="$Street2"> 
                   	</div>
                   	<div>
-                    	<label for="provdrCity">City</label>
-                    	<input type="text" id="provdrCity" name="provdrCity" placeholder="Indianapolis">
-                    	<input type="hidden" value="$provdrCity"> 
+                    	<label for="City">City</label>
+                    	<input type="text" id="City" name="City" placeholder="Indianapolis">
+                    	<input type="hidden" value="$City"> 
                   	</div
                   	><div>
-                    	<label for="provdrZipcode">Zip Code*</label>
-                    	<input type="text" id="provdrZipcode" name="provdrZipcode" >
-                    	<input type="hidden" value="$provdrZipcode"> 
+                    	<label for="Zip">Zip Code*</label>
+                    	<input type="text" id="Zip" name="Zip" >
+                    	<input type="hidden" value="$Zip"> 
                   	</div>
                   	<div>
-                    	<label for="provdrUrl">Website Address</label>
-                    	<input type="url" id="provdrUrl" name="provdrUrl" >
-                    	<input type="hidden" value="$provdrUrl"> 
+                    	<label for="Url">Website Address</label>
+                    	<input type="url" id="Url" name="Url" >
+                    	<input type="hidden" value="$Url"> 
                   	</div>
                     <div>
-                    	<label for="provdrEmail">Email Address*</label>
-                    	<input type="email" id="provdrEmail" name="provdrEmail" >
-                    	<input type="hidden" value="$provdrEmail"> 
+                    	<label for="Email">Email Address*</label>
+                    	<input type="email" id="Email" name="Email" >
+                    	<input type="hidden" value="$Email"> 
                   	</div>	
                   	<div>
-                    	<label for="provdrPhone">Phone #*</label>
-                    	<input type="tel" id="provdrPhone" name="provdrPhone" >
-                    	<input type="hidden" value="$provdrPhone"> 
+                    	<label for="Phone">Phone #*</label>
+                    	<input type="tel" id="Phone" name="Phone" size="10" placeholder="enter numbers only">
+                    	<input type="hidden" value="$Phone"> 
                   	</div>
                     <div>
-                    <label for="provdrNhood">Neighborhood Location*</label>
+                    <label for="NeighborhoodID">Neighborhood Location*</label>
                     <input type="hidden" value="$provdrNhood">
-                      <select name="provdrNhood" id="provdrNhood"> 
+                      <select name="NeighborhoodID" id="NeighborhoodID"> 
                         <option value="">Select....</option>
                         <option value="chill">Crown Hill</option>
                         <option  value="hvacin">Highland Vacinity</option>
@@ -196,25 +198,25 @@
                       </select>
                     </div>
                   <div>
-                    <label for="provdrcontactMethod">Preferred Method of Contact*</label>
-                    <input type="hidden" value="$provdrcontactMethod">
-                      <select name="provdrcontactMethod" id="provdrcontactMethod"> 
+                    <label for="Contact">Preferred Method of Contact*</label>
+                    <input type="hidden" value="$Contact">
+                      <select name="Contact" id="Contact"> 
                         <option value="">Select...</option>
                         <option value="e">Email</option>
                         <option value="p">Phone</option>
                       </select>
                   </div>
                   <div>
-                    <label for="provdracctType">Type of Account*</label>
-                    <input type="hidden" value="$provdracctType">
-                      <select name="provdracctType" id="provdracctType"> 
+                    <label for="ProviderType">Type of Account*</label>
+                    <input type="hidden" value="$ProviderType">
+                      <select name="ProviderType" id="ProviderType"> 
                         <option value="">Select...</option>
                         <option value="b">Business Provider</option>
                         <option value="i">Individual Provider</option>
                         <option value="o">Nonprofit Provider</option>
                       </select>
                   </div>
-            <div align="center"><input type="submit" data-mini="true" value="Save Profile" data-inline="true" data-role="button"></div>
+            <div align="center"><input type="submit" name="submit" data-mini="true" value="Save Profile" data-inline="true" data-role="button"></div>
             
                   </form>
                </div> <!-- /upage content -->
