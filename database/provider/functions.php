@@ -37,4 +37,13 @@ function getProviderById( $id ) {
 	return mysql_query($sql);	
 }
 
+function getProvidersByUserId( $userId ) {
+
+	$sql  = "SELECT p.* FROM Provider up INNER JOIN UserProvider up on ";
+	$sql .= "p.ProviderId = up.ProviderId and up.userId = " . $userId . " order by p.Name";
+	
+	return mysql_query($sql); 
+	
+}
+
 ?>

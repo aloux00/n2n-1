@@ -78,7 +78,7 @@
                     <div style="height: 25px"></div>
                   
                   <div class="ui-field-contain" style="margin-left:30px; margin-right:30px;">
-                    <label for="pIndex" style="font-size:12px;">Index</label>
+                    <label for="pIndex" style="font-size:12px;">Index <?php echo "Testing"; ?></label>
                     <input type="hidden" value="$pIndex">
                       <select name="pIndex" id="pIndex" data-mini="true" data-ajax="true" onChange="window.location='indexList.php?pIndex='+this.value" > 
                         <option value="">Select...</option>
@@ -131,38 +131,38 @@
           
           <div data-role="popup" id="popupSignIn" class="ui-corner-all" style="margin-bottom:30px;background-color:#666666; color:#ffffff;">
           <script type="text/javascript">
-	$(document).ready(function() {
-	$('#signIn').validate({
-    rules: {
-        email: {
-            required: true,
-			minlength: 6, 
-        },
-        loginUsrpasswrd: {
-            required: true,
-			minlength: 6, 
-        }
-	},
-    messages: {
-        loginUsrname: {
-            required: "Please enter a username."
-        },
-        loginUsrpasswrd: {
-            required: "Please enter a password."
-        },
-    errorPlacement: function (error, element) {
-        error.appendTo(element.parent().prev());
-    }, 
-    submitHandler: function (form) {
-        $(':mobile-pagecontainer').pagecontainer('change', '#success', {
-            reload: false
-        });
-        return false;
-    }
-	}
-});
-});
-</script>      
+			$(document).ready(function() {
+			$('#signIn').validate({
+		    rules: {
+		        email: {
+		            required: true,
+					minlength: 6, 
+		        },
+		        loginUsrpasswrd: {
+		            required: true,
+					minlength: 6, 
+		        }
+			},
+		    messages: {
+		        loginUsrname: {
+		            required: "Please enter a username."
+		        },
+		        loginUsrpasswrd: {
+		            required: "Please enter a password."
+		        },
+		    errorPlacement: function (error, element) {
+		        error.appendTo(element.parent().prev());
+		    }, 
+		    submitHandler: function (form) {
+		        $(':mobile-pagecontainer').pagecontainer('change', '#success', {
+		            reload: false
+		        });
+		        return false;
+		    }
+			}
+		});
+		});
+		</script>      
         <form method="post" action="verifyLogin.php"  id="signIn" data-theme="a">
         	<div style="padding:10px 20px;">
             

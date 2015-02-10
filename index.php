@@ -8,7 +8,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
 	<link rel="stylesheet" href="themes/Neighborly.min.css">
     <link rel="stylesheet" href="N2N.css">
     <style>
@@ -17,15 +17,15 @@
 	   text-align: left;
 	   margin-left: 10px;
     }
-	</style>	     
+	</style>
     <?php
 	require './database/user/functions.php';
 	/* require('dbx.php'); */
 	/* require('createUserAcct.php'); */
 	?> 
 	<title>Neighbor2Neighbor Directory</title>    
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 	<script type="text/javascript" src="utils.js"></script>
 	<script type="application/javascript" src="js/jquery.min.js"></script>
 	<script type="application/javascript" src="js/index_user_scripts.js"></script>
@@ -47,7 +47,7 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>     
+</script>
   </head>
 
   <body><!-- content goes here -->
@@ -81,7 +81,7 @@
                     <div style="height: 25px"></div>
                   
                   <div class="ui-field-contain" style="margin-left:30px; margin-right:30px;">
-                    <label for="pIndex" style="font-size:12px;">Index</label>
+                    <label for="pIndex" style="font-size:12px;">Index <?php echo "Testing"; ?></label>
                     <input type="hidden" value="$pIndex">
                       <select name="pIndex" id="pIndex" data-mini="true" data-ajax="true" onChange="window.location='providerList.php?index='+this.value" > 
                         <option value="">Select...</option>
@@ -142,7 +142,7 @@
 			$(document).ready(function() {
 				$('#signIn').validate({
 				rules: {
-					loginUsrname: {
+					email: {
 						required: true,
 						minlength: 6, 
 					},
@@ -180,9 +180,9 @@
         	<h4>If you do not have an account, click <a href="userRegistration.html">here </a>to register. </h4>
             <div style="height:10px;"></div>
             <div>
-            	<label for="loginUsrname" class="ui-hidden-accessible">Username*</label>
-                <input type="text" id="loginUsrname" name="loginUsrname" placeholder="Username*">
-                <input type="hidden" value="$loginUsrname">    	
+            	<label for="loginEmailAddr" class="ui-hidden-accessible">Email Address*</label>
+                <input type="email" id="email" name="email" placeholder="Email Address*">
+                <input type="hidden" value="$loginEmailAddr">    	
             
     			<label for="loginUsrpasswrd" class="ui-hidden-accessible">Password*</label>
                 <input type="password" id="loginUsrpasswrd" name="loginUsrpasswrd" placeholder="Password*">
